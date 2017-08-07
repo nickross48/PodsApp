@@ -55,6 +55,11 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func pickProfilePicture(_ sender: Any) {
+        
+    }
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.passwordTextField.resignFirstResponder()
         self.emailTextField.resignFirstResponder()
@@ -62,6 +67,8 @@ class SignUpViewController: UIViewController {
     }
     
 }
+
+
 
 
 // trying to get black border on bottom of textfields
