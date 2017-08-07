@@ -19,10 +19,12 @@
 		707A30F41F33C35100AD6EA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707A30E51F33C35100AD6EA4 /* LaunchScreen.storyboard */; };
 		707A30F51F33C35100AD6EA4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30E71F33C35100AD6EA4 /* LoginViewController.swift */; };
 		707A30F61F33C35100AD6EA4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30E81F33C35100AD6EA4 /* SignUpViewController.swift */; };
-		707A30F71F33C35100AD6EA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30E91F33C35100AD6EA4 /* ViewController.swift */; };
 		707A30F91F33C45E00AD6EA4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30F81F33C45E00AD6EA4 /* AuthService.swift */; };
 		708150F21F38A82600760DD0 /* BuildProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708150F11F38A82600760DD0 /* BuildProfile.storyboard */; };
 		708150F41F38A83B00760DD0 /* BuildProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708150F31F38A83B00760DD0 /* BuildProfileViewController.swift */; };
+		7091FF7E1F38EFA000E336F4 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7091FF7D1F38EFA000E336F4 /* AnalysisViewController.swift */; };
+		7091FF801F38EFDC00E336F4 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7091FF7F1F38EFDC00E336F4 /* RecordViewController.swift */; };
+		7091FF821F38EFF000E336F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7091FF811F38EFF000E336F4 /* ProfileViewController.swift */; };
 		70B363FF1F34F885000A9867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B363FE1F34F885000A9867 /* Assets.xcassets */; };
 		D61609A56A26156BEC6C91A2 /* Pods_Tracks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CD6F7599AB8E1E08C2A5 /* Pods_Tracks.framework */; };
 /* End PBXBuildFile section */
@@ -42,10 +44,12 @@
 		707A30E51F33C35100AD6EA4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		707A30E71F33C35100AD6EA4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		707A30E81F33C35100AD6EA4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		707A30E91F33C35100AD6EA4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		707A30F81F33C45E00AD6EA4 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		708150F11F38A82600760DD0 /* BuildProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BuildProfile.storyboard; sourceTree = "<group>"; };
 		708150F31F38A83B00760DD0 /* BuildProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildProfileViewController.swift; sourceTree = "<group>"; };
+		7091FF7D1F38EFA000E336F4 /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
+		7091FF7F1F38EFDC00E336F4 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		7091FF811F38EFF000E336F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		70B363FE1F34F885000A9867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A34400D17168E84A85DA7AB8 /* Pods-Tracks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tracks/Pods-Tracks.debug.xcconfig"; sourceTree = "<group>"; };
 		E59E1862AED0F0AD2E78A36E /* Pods-Tracks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tracks/Pods-Tracks.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,8 +168,10 @@
 			children = (
 				707A30E71F33C35100AD6EA4 /* LoginViewController.swift */,
 				707A30E81F33C35100AD6EA4 /* SignUpViewController.swift */,
-				707A30E91F33C35100AD6EA4 /* ViewController.swift */,
 				708150F31F38A83B00760DD0 /* BuildProfileViewController.swift */,
+				7091FF7D1F38EFA000E336F4 /* AnalysisViewController.swift */,
+				7091FF7F1F38EFDC00E336F4 /* RecordViewController.swift */,
+				7091FF811F38EFF000E336F4 /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -311,11 +317,13 @@
 				707A30F61F33C35100AD6EA4 /* SignUpViewController.swift in Sources */,
 				708150F41F38A83B00760DD0 /* BuildProfileViewController.swift in Sources */,
 				707A30F11F33C35100AD6EA4 /* Constants.swift in Sources */,
+				7091FF7E1F38EFA000E336F4 /* AnalysisViewController.swift in Sources */,
+				7091FF801F38EFDC00E336F4 /* RecordViewController.swift in Sources */,
+				7091FF821F38EFF000E336F4 /* ProfileViewController.swift in Sources */,
 				707A30F91F33C45E00AD6EA4 /* AuthService.swift in Sources */,
 				707A30EE1F33C35100AD6EA4 /* UserService.swift in Sources */,
 				707A30EA1F33C35100AD6EA4 /* AppDelegate.swift in Sources */,
 				707A30EC1F33C35100AD6EA4 /* Helpers.swift in Sources */,
-				707A30F71F33C35100AD6EA4 /* ViewController.swift in Sources */,
 				707A30ED1F33C35100AD6EA4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
