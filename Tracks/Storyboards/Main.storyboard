@@ -22,7 +22,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="rsz_profile" id="udQ-IA-fCU"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="icons8-User-40" id="udQ-IA-fCU">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6A-C8-EAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +43,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="rsz_record" id="0ae-im-an2"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="icons8-Add-40" id="0ae-im-an2">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdy-xA-Qw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +64,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="rsz_2rectangle_950_copy" id="5V0-Ug-uMT"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-Lock-40" id="5V0-Ug-uMT">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sv-AP-chX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,8 +93,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rsz_2rectangle_950_copy" width="50" height="50"/>
-        <image name="rsz_profile" width="50" height="50"/>
-        <image name="rsz_record" width="50" height="50"/>
+        <image name="icons8-Add-40" width="40" height="40"/>
+        <image name="icons8-Lock-40" width="40" height="40"/>
+        <image name="icons8-User-40" width="40" height="40"/>
     </resources>
 </document>

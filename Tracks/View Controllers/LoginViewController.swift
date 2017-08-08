@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //
         
     }
     
@@ -35,29 +34,42 @@ class LoginViewController: UIViewController {
         let email = emailField.text
         let password = passwordField.text
         
-        Auth.auth().signIn(withEmail: email!, password: password!, completion: { (user, error) in
-            if let _ = user {
-                self.signIn()
-                print("User signed in")
-            }
-            else {
-                if let error = error {
-                    if let errCode = AuthErrorCode(rawValue: error._code) {
-                        switch errCode {
-                        case .userNotFound:
-                            self.showAlert("User account not found. Try registering")
-                        case .wrongPassword:
-                            self.showAlert("Incorrect username/password combination")
-                        default:
-                            self.showAlert("Error: \(error.localizedDescription)")
+        if (email == "" && password == "") {
+            print ("Need at least you email")
+            let emailController = UIAlertController(title: "Please insert an email and password", message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .cancel){(action) in ()}
+            
+            emailController.addAction(okAction)
+            
+            self.present(emailController, animated: true, completion: nil)
+            
+        } else {
+            
+            Auth.auth().signIn(withEmail: email!, password: password!, completion: { (user, error) in
+                if let _ = user {
+                    self.signIn()
+                    print("User signed in")
+                }
+                else {
+                    if let error = error {
+                        if let errCode = AuthErrorCode(rawValue: error._code) {
+                            switch errCode {
+                            case .userNotFound:
+                                self.showAlert("User account not found. Try registering")
+                            case .wrongPassword:
+                                self.showAlert("Incorrect username/password combination")
+                            default:
+                                self.showAlert("Error: \(error.localizedDescription)")
+                            }
                         }
+                        return
                     }
+                    assertionFailure("user and error are nil")
                     return
                 }
-                assertionFailure("user and error are nil")
-                return
-            }
-        })
+            })
+        }
+        
     }
     
     @IBAction func didRequestPasswordReset(_ sender: UIButton) {

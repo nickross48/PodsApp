@@ -26,32 +26,45 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var createButton: UIButton!
     
     @IBAction func createButtonTapped(_ sender: UIButton) {
-            guard let password = passwordTextField.text,
+        guard let password = passwordTextField.text,
             let email = emailTextField.text,
             let name = nameTextField.text
             else {
                 return
         }
         
-        AuthService.createUser(controller: self, email: email, password: password) { (authUser) in
-            guard let firUser = authUser else {
-                return
-            }
+        if (email == "" && name == "" && password == "") {
+            print ("Need at least you email")
+            let emailController = UIAlertController(title: "Please insert an email and password", message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .cancel){(action) in ()}
             
-            UserService.create(firUser, name: name, email: email) { (user) in
-                guard let user = user else {
-                    // handle error
+            emailController.addAction(okAction)
+            
+            self.present(emailController, animated: true, completion: nil)
+            
+        } else {
+            
+            AuthService.createUser(controller: self, email: email, password: password) { (authUser) in
+                guard let firUser = authUser else {
                     return
                 }
                 
-                User.setCurrent(user, writeToUserDefaults: true)
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                if let initialViewController = storyboard.instantiateInitialViewController() {
-                    self.view.window?.rootViewController = initialViewController
-                    self.view.window?.makeKeyAndVisible()
+                UserService.create(firUser, name: name, email: email) { (user) in
+                    guard let user = user else {
+                        // handle error
+                        return
+                    }
+                    
+                    User.setCurrent(user, writeToUserDefaults: true)
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                    if let initialViewController = storyboard.instantiateInitialViewController() {
+                        self.view.window?.rootViewController = initialViewController
+                        self.view.window?.makeKeyAndVisible()
+                    }
                 }
             }
+            
         }
     }
     

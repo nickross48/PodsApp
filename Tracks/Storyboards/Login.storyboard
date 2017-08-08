@@ -81,6 +81,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapSignIn:" destination="h8M-XA-0S6" eventType="touchUpInside" id="f2I-GK-Aha"/>
+                                    <segue destination="iJB-dg-1Ph" kind="show" identifier="toMainStoryboard" id="CqR-dc-IKB"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="LWs-6j-ghg">
@@ -142,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b92-mT-D82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98.400000000000006" y="120.98950524737631"/>
+            <point key="canvasLocation" x="-119" y="121"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="vNO-3T-gU7">
@@ -197,6 +198,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createButtonTapped:" destination="1jd-bL-ddS" eventType="touchUpInside" id="9dU-sc-JEX"/>
+                                    <segue destination="aZt-tv-c6k" kind="show" identifier="toBuildProfileStoryboard" id="T0q-TQ-yh7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEX-NQ-ev5">
@@ -269,7 +271,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vic-Ch-M3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="120.98950524737631"/>
+            <point key="canvasLocation" x="772" y="121"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="a7P-wj-6Tr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="iJB-dg-1Ph" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axG-gQ-b9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119" y="629"/>
+        </scene>
+        <!--BuildProfile-->
+        <scene sceneID="xx2-Qn-fGU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BuildProfile" id="aZt-tv-c6k" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHs-FO-hpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="629"/>
         </scene>
     </scenes>
     <resources>
