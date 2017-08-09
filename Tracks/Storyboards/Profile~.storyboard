@@ -9,6 +9,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Profile-->
+        <scene sceneID="Z2a-Hb-Agl">
+            <objects>
+                <viewController title="Profile" id="xnN-O1-Qdl" customClass="ProfileViewController" customModule="Tracks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BqL-aR-Auc"/>
+                        <viewControllerLayoutGuide type="bottom" id="eV4-vQ-S7n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k6P-7h-fgd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YDf-eP-0XM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6A-C8-EAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="854.1229385307347"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6MV-s0-8Me">
             <objects>
@@ -21,7 +40,7 @@
                     <connections>
                         <segue destination="Kps-JL-9NK" kind="relationship" relationship="viewControllers" id="9iI-2B-ROa"/>
                         <segue destination="LcM-tg-dkB" kind="relationship" relationship="viewControllers" id="JmS-IC-9u7"/>
-                        <segue destination="3VS-bH-WvL" kind="relationship" relationship="viewControllers" id="Ihn-4Y-AgZ"/>
+                        <segue destination="3Vo-gq-SRr" kind="relationship" relationship="viewControllers" id="Ihn-4Y-AgZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q3L-Gk-aFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,15 +67,29 @@
             </objects>
             <point key="canvasLocation" x="568.79999999999995" y="436.73163418290858"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="cJN-YC-Yej">
+        <!--Navigation Controller-->
+        <scene sceneID="brn-uf-2dn">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="3VS-bH-WvL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="VVt-Uk-WyY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y89-Yb-BGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Vo-gq-SRr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="icons8-User-40" id="udQ-IA-fCU">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TES-cT-nC5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xnN-O1-Qdl" kind="relationship" relationship="rootViewController" id="i7e-JK-8KU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SvY-fg-vHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-119.2" y="854.1229385307347"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-User-40" width="40" height="40"/>
+    </resources>
 </document>
