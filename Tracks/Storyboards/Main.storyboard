@@ -17,6 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="Kps-JL-9NK" kind="relationship" relationship="viewControllers" id="9iI-2B-ROa"/>
@@ -32,7 +33,9 @@
         <scene sceneID="NM9-zd-AZh">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="Kps-JL-9NK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aBH-qE-0X0"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-Home-40" id="aBH-qE-0X0">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hp2-Ml-gMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,7 +45,9 @@
         <scene sceneID="mdp-eE-jy0">
             <objects>
                 <viewControllerPlaceholder storyboardName="Record" id="LcM-tg-dkB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lyP-Tm-zMP"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-Add-40" id="lyP-Tm-zMP">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfu-ji-XhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,11 +57,18 @@
         <scene sceneID="cJN-YC-Yej">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile" id="3VS-bH-WvL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="VVt-Uk-WyY"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-User-40" id="VVt-Uk-WyY">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y89-Yb-BGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-119.2" y="854.1229385307347"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-Add-40" width="40" height="40"/>
+        <image name="icons8-Home-40" width="40" height="40"/>
+        <image name="icons8-User-40" width="40" height="40"/>
+    </resources>
 </document>

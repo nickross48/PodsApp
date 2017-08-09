@@ -262,6 +262,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gCl-E1-1eW"/>
                     <connections>
                         <outlet property="createButton" destination="QYY-0y-Y2V" id="yg2-fC-Atd"/>
                         <outlet property="emailTextField" destination="rod-2o-c1I" id="uKM-9N-Cj9"/>
