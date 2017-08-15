@@ -67,3 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // <a href="https://icons8.com/icon/14095/Lock">Lock icon credits</a>
 // link for lock icon
 
+
+// <a href="https://icons8.com/icon/14099/Settings">Settings icon credits</a>
+// link for settings

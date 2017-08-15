@@ -29,6 +29,8 @@
 		7091FF801F38EFDC00E336F4 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7091FF7F1F38EFDC00E336F4 /* RecordViewController.swift */; };
 		7091FF821F38EFF000E336F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7091FF811F38EFF000E336F4 /* ProfileViewController.swift */; };
 		70B363FF1F34F885000A9867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B363FE1F34F885000A9867 /* Assets.xcassets */; };
+		70FC80D51F42311500426464 /* MyPods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC80D41F42311500426464 /* MyPods.swift */; };
+		70FC80D71F42312600426464 /* MyMilestones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC80D61F42312600426464 /* MyMilestones.swift */; };
 		D61609A56A26156BEC6C91A2 /* Pods_Tracks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CD6F7599AB8E1E08C2A5 /* Pods_Tracks.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		7091FF7F1F38EFDC00E336F4 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		7091FF811F38EFF000E336F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		70B363FE1F34F885000A9867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70FC80D41F42311500426464 /* MyPods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPods.swift; sourceTree = "<group>"; };
+		70FC80D61F42312600426464 /* MyMilestones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMilestones.swift; sourceTree = "<group>"; };
 		A34400D17168E84A85DA7AB8 /* Pods-Tracks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tracks/Pods-Tracks.debug.xcconfig"; sourceTree = "<group>"; };
 		E59E1862AED0F0AD2E78A36E /* Pods-Tracks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tracks/Pods-Tracks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +185,8 @@
 				7091FF7F1F38EFDC00E336F4 /* RecordViewController.swift */,
 				7091FF811F38EFF000E336F4 /* ProfileViewController.swift */,
 				7062ED531F3B522D00E3116D /* HomeViewController.swift */,
+				70FC80D41F42311500426464 /* MyPods.swift */,
+				70FC80D61F42312600426464 /* MyMilestones.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -325,7 +331,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70FC80D51F42311500426464 /* MyPods.swift in Sources */,
 				707A30F51F33C35100AD6EA4 /* LoginViewController.swift in Sources */,
+				70FC80D71F42312600426464 /* MyMilestones.swift in Sources */,
 				707A30F61F33C35100AD6EA4 /* SignUpViewController.swift in Sources */,
 				708150F41F38A83B00760DD0 /* BuildProfileViewController.swift in Sources */,
 				707A30F11F33C35100AD6EA4 /* Constants.swift in Sources */,

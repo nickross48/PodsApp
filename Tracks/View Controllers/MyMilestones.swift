@@ -1,14 +1,16 @@
 //
-//  ProfileViewController.swift
+//  MyMilestones.swift
 //  Tracks
 //
-//  Created by Nicholas Ross on 2017-08-07.
+//  Created by Nicholas Ross on 2017-08-14.
 //  Copyright © 2017 Nicholas Ross. All rights reserved.
 //
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+
+
+class MyMilestonesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,5 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var MyPodsMyMilestonesSegment: UISegmentedControl!
     
 }
