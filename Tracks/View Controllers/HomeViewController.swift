@@ -11,6 +11,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var homeTableView: UITableView!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,3 +29,13 @@ class HomeViewController: UIViewController {
     
     
 }
+
+
+// allows cells to have varying heights w/in the same table view, might not be needed but following makestagram
+//extension HomeViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let post = posts[indexPath.row]
+//        
+//        return post.imageHeight
+//    }
+//}

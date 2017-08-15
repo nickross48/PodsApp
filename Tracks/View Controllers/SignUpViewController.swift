@@ -33,7 +33,7 @@ class SignUpViewController: UIViewController {
                 return
         }
         
-        if (email == "" && name == "" && password == "") {
+        if (email == "" || name == "" || password == "") {
             print ("Need at least you email")
             let emailController = UIAlertController(title: "Please insert an email and password", message: nil, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .cancel){(action) in ()}

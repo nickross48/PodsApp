@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gzG-q6-syi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F36-dv-myP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,65 +10,42 @@
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
-        <scene sceneID="6MV-s0-8Me">
+        <scene sceneID="eTt-5O-HQQ">
             <objects>
-                <tabBarController id="gzG-q6-syi" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="s7i-tG-Ybj">
+                <tabBarController id="F36-dv-myP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Z2N-35-bQB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Kps-JL-9NK" kind="relationship" relationship="viewControllers" id="9iI-2B-ROa"/>
-                        <segue destination="LcM-tg-dkB" kind="relationship" relationship="viewControllers" id="JmS-IC-9u7"/>
-                        <segue destination="3VS-bH-WvL" kind="relationship" relationship="viewControllers" id="Ihn-4Y-AgZ"/>
+                        <segue destination="JtS-dv-3D9" kind="relationship" relationship="viewControllers" id="KeG-6c-nwA"/>
+                        <segue destination="grd-Zr-GEv" kind="relationship" relationship="viewControllers" id="4ux-Pv-08S"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q3L-Gk-aFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWf-JH-ANm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-382" y="109"/>
+            <point key="canvasLocation" x="-602" y="149"/>
         </scene>
         <!--Home-->
-        <scene sceneID="NM9-zd-AZh">
+        <scene sceneID="jgt-MK-aa7">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="Kps-JL-9NK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-Home-40" id="aBH-qE-0X0">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
-                    </tabBarItem>
+                <viewControllerPlaceholder storyboardName="Home" id="JtS-dv-3D9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="cwi-Z8-xOH"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hp2-Ml-gMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQY-Fn-34G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277" y="-10"/>
+            <point key="canvasLocation" x="66" y="116"/>
         </scene>
-        <!--Record-->
-        <scene sceneID="mdp-eE-jy0">
+        <!--History-->
+        <scene sceneID="cjj-MS-Qr9">
             <objects>
-                <viewControllerPlaceholder storyboardName="Record" id="LcM-tg-dkB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-Add-40" id="lyP-Tm-zMP">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
-                    </tabBarItem>
+                <viewControllerPlaceholder storyboardName="History" id="grd-Zr-GEv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="cqx-Pb-bFk"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kfu-ji-XhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geT-cJ-eyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="108"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="cJN-YC-Yej">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="3VS-bH-WvL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-User-40" id="VVt-Uk-WyY">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
-                    </tabBarItem>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y89-Yb-BGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="280" y="205"/>
+            <point key="canvasLocation" x="66" y="200"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icons8-Add-40" width="40" height="40"/>
-        <image name="icons8-Home-40" width="40" height="40"/>
-        <image name="icons8-User-40" width="40" height="40"/>
-    </resources>
 </document>

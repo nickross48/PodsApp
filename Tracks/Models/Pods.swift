@@ -1,46 +1,41 @@
 //
-//  User.swift
+//  Pods.swift
 //  Tracks
 //
-//  Created by Nicholas Ross on 2017-08-02.
+//  Created by Nicholas Ross on 2017-08-15.
 //  Copyright © 2017 Nicholas Ross. All rights reserved.
 //
 
 import Foundation
 import FirebaseDatabase.FIRDataSnapshot
 
-class User: NSObject {
+class Pods: NSObject {
     
     // MARK: - Properties
     
-    let uid: String
-    let name: String
-    let email: String
+    let pid: String
+    let podName: String
     
     var dictValue: [String : Any] {
-        return [ "name": name,
-                "email" : email]
+        return [ "podName": podName]
     }
     
     
     // MARK: - Init
     
-    init(uid: String, name: String, email: String) {
-        self.uid = uid
-        self.name = name
-        self.email = email
+    init(pid: String, podName: String) {
+        self.pid = pid
+        self.podName = podName
         super.init()
     }
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
-            let name = dict["name"] as? String,
-            let email = dict["email"] as? String
+            let podName = dict["podName"] as? String
             else { return nil }
         
-        self.uid = snapshot.key
-        self.name = name
-        self.email = email
+        self.pid = snapshot.key
+        self.podName = podName
         
         super.init()
     }
@@ -48,19 +43,20 @@ class User: NSObject {
     
     
     required init?(coder aDecoder: NSCoder) {
-        guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
-            let name = aDecoder.decodeObject(forKey: Constants.UserDefaults.name) as? String,
-            let email = aDecoder.decodeObject(forKey: Constants.UserDefaults.email) as? String
+        guard let pid = aDecoder.decodeObject(forKey: Constants.PodDefaults.pid) as? String,
+            let podName = aDecoder.decodeObject(forKey: Constants.PodDefaults.podName) as? String
             else { return nil }
         
-        self.uid = uid
-        self.name = name
-        self.email = email
+        self.pid = pid
+        self.podName = podName
         
         super.init()
     }
     
+    
+    /*
     // MARK: - Singleton
+    // do we need the singleton?
     
     // 1
     private static var _current: User?
@@ -86,17 +82,18 @@ class User: NSObject {
             let data = NSKeyedArchiver.archivedData(withRootObject: User)
             
             // 4
-            UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
+            UserDefaults.standard.set(data, forKey: Constants.PodDefaults.currentUser)
         }
         
         _current = User
     }
+    */
+    
 }
 
-extension User: NSCoding {
+extension Pods: NSCoding {
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
-        aCoder.encode(name, forKey: Constants.UserDefaults.name)
-        aCoder.encode(email, forKey: Constants.UserDefaults.email)
+        aCoder.encode(pid, forKey: Constants.PodDefaults.pid)
+        aCoder.encode(podName, forKey: Constants.PodDefaults.podName)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  HistoryViewController.swift
 //  Tracks
 //
 //  Created by Nicholas Ross on 2017-08-15.
@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ProfileViewController: UIViewController {
+class HistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

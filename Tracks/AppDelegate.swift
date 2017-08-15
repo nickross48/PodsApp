@@ -70,3 +70,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // <a href="https://icons8.com/icon/14099/Settings">Settings icon credits</a>
 // link for settings
+
+// <a href="https://icons8.com/icon/15/Bar-Chart">Bar chart icon credits</a>
+// link for chart icon

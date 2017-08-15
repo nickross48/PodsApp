@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		705C8A0F1F43379A0004A07A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C8A0E1F43379A0004A07A /* HistoryViewController.swift */; };
+		705C8A111F4337B50004A07A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C8A101F4337B50004A07A /* ProfileViewController.swift */; };
+		705C8A131F433D100004A07A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705C8A121F433D100004A07A /* Home.storyboard */; };
+		705C8A151F433D540004A07A /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705C8A141F433D540004A07A /* History.storyboard */; };
+		705C8A191F4382A90004A07A /* PodStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C8A181F4382A90004A07A /* PodStorage.swift */; };
+		705C8A1B1F4388130004A07A /* Pods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C8A1A1F4388130004A07A /* Pods.swift */; };
 		7062ED541F3B522D00E3116D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7062ED531F3B522D00E3116D /* HomeViewController.swift */; };
-		7062ED561F3B53AE00E3116D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7062ED551F3B53AE00E3116D /* Home.storyboard */; };
-		7062ED581F3B53F400E3116D /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7062ED571F3B53F400E3116D /* Record.storyboard */; };
-		7062ED5A1F3B540600E3116D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7062ED591F3B540600E3116D /* Profile.storyboard */; };
 		707A30EA1F33C35100AD6EA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30D51F33C35000AD6EA4 /* AppDelegate.swift */; };
 		707A30EC1F33C35100AD6EA4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30D91F33C35000AD6EA4 /* Helpers.swift */; };
 		707A30ED1F33C35100AD6EA4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30DB1F33C35000AD6EA4 /* User.swift */; };
@@ -26,21 +29,20 @@
 		707A30F91F33C45E00AD6EA4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30F81F33C45E00AD6EA4 /* AuthService.swift */; };
 		708150F21F38A82600760DD0 /* BuildProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708150F11F38A82600760DD0 /* BuildProfile.storyboard */; };
 		708150F41F38A83B00760DD0 /* BuildProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708150F31F38A83B00760DD0 /* BuildProfileViewController.swift */; };
-		7091FF801F38EFDC00E336F4 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7091FF7F1F38EFDC00E336F4 /* RecordViewController.swift */; };
-		7091FF821F38EFF000E336F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7091FF811F38EFF000E336F4 /* ProfileViewController.swift */; };
 		70B363FF1F34F885000A9867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B363FE1F34F885000A9867 /* Assets.xcassets */; };
-		70FC80D51F42311500426464 /* MyPods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC80D41F42311500426464 /* MyPods.swift */; };
-		70FC80D71F42312600426464 /* MyMilestones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC80D61F42312600426464 /* MyMilestones.swift */; };
 		D61609A56A26156BEC6C91A2 /* Pods_Tracks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CD6F7599AB8E1E08C2A5 /* Pods_Tracks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1842CD6F7599AB8E1E08C2A5 /* Pods_Tracks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tracks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		700AA5E61F3260090056DF66 /* Tracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		705C8A0E1F43379A0004A07A /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		705C8A101F4337B50004A07A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		705C8A121F433D100004A07A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		705C8A141F433D540004A07A /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		705C8A181F4382A90004A07A /* PodStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodStorage.swift; sourceTree = "<group>"; };
+		705C8A1A1F4388130004A07A /* Pods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pods.swift; sourceTree = "<group>"; };
 		7062ED531F3B522D00E3116D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		7062ED551F3B53AE00E3116D /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		7062ED571F3B53F400E3116D /* Record.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
-		7062ED591F3B540600E3116D /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		707A30D51F33C35000AD6EA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		707A30D91F33C35000AD6EA4 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		707A30DB1F33C35000AD6EA4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -56,11 +58,7 @@
 		707A30F81F33C45E00AD6EA4 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		708150F11F38A82600760DD0 /* BuildProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BuildProfile.storyboard; sourceTree = "<group>"; };
 		708150F31F38A83B00760DD0 /* BuildProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildProfileViewController.swift; sourceTree = "<group>"; };
-		7091FF7F1F38EFDC00E336F4 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
-		7091FF811F38EFF000E336F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		70B363FE1F34F885000A9867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		70FC80D41F42311500426464 /* MyPods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPods.swift; sourceTree = "<group>"; };
-		70FC80D61F42312600426464 /* MyMilestones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMilestones.swift; sourceTree = "<group>"; };
 		A34400D17168E84A85DA7AB8 /* Pods-Tracks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tracks/Pods-Tracks.debug.xcconfig"; sourceTree = "<group>"; };
 		E59E1862AED0F0AD2E78A36E /* Pods-Tracks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tracks/Pods-Tracks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +105,7 @@
 		700AA5E81F3260090056DF66 /* Tracks */ = {
 			isa = PBXGroup;
 			children = (
+				707A30E11F33C35000AD6EA4 /* Supporting Files */,
 				70B363FE1F34F885000A9867 /* Assets.xcassets */,
 				707A30D51F33C35000AD6EA4 /* AppDelegate.swift */,
 				707A30D71F33C35000AD6EA4 /* Extensions */,
@@ -114,7 +113,6 @@
 				707A30DA1F33C35000AD6EA4 /* Models */,
 				707A30DC1F33C35000AD6EA4 /* Services */,
 				707A30DE1F33C35000AD6EA4 /* Storyboards */,
-				707A30E11F33C35000AD6EA4 /* Supporting Files */,
 				707A30E61F33C35100AD6EA4 /* View Controllers */,
 			);
 			path = Tracks;
@@ -139,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				707A30DB1F33C35000AD6EA4 /* User.swift */,
+				705C8A1A1F4388130004A07A /* Pods.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,8 +145,9 @@
 		707A30DC1F33C35000AD6EA4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				707A30DD1F33C35000AD6EA4 /* UserService.swift */,
 				707A30F81F33C45E00AD6EA4 /* AuthService.swift */,
+				707A30DD1F33C35000AD6EA4 /* UserService.swift */,
+				705C8A181F4382A90004A07A /* PodStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -158,9 +158,8 @@
 				707A30DF1F33C35000AD6EA4 /* Login.storyboard */,
 				708150F11F38A82600760DD0 /* BuildProfile.storyboard */,
 				707A30E01F33C35000AD6EA4 /* Main.storyboard */,
-				7062ED591F3B540600E3116D /* Profile.storyboard */,
-				7062ED571F3B53F400E3116D /* Record.storyboard */,
-				7062ED551F3B53AE00E3116D /* Home.storyboard */,
+				705C8A121F433D100004A07A /* Home.storyboard */,
+				705C8A141F433D540004A07A /* History.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -182,11 +181,9 @@
 				707A30E71F33C35100AD6EA4 /* LoginViewController.swift */,
 				707A30E81F33C35100AD6EA4 /* SignUpViewController.swift */,
 				708150F31F38A83B00760DD0 /* BuildProfileViewController.swift */,
-				7091FF7F1F38EFDC00E336F4 /* RecordViewController.swift */,
-				7091FF811F38EFF000E336F4 /* ProfileViewController.swift */,
 				7062ED531F3B522D00E3116D /* HomeViewController.swift */,
-				70FC80D41F42311500426464 /* MyPods.swift */,
-				70FC80D61F42312600426464 /* MyMilestones.swift */,
+				705C8A0E1F43379A0004A07A /* HistoryViewController.swift */,
+				705C8A101F4337B50004A07A /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -265,14 +262,13 @@
 			files = (
 				707A30F01F33C35100AD6EA4 /* Main.storyboard in Resources */,
 				707A30F21F33C35100AD6EA4 /* GoogleService-Info.plist in Resources */,
-				7062ED5A1F3B540600E3116D /* Profile.storyboard in Resources */,
 				707A30EF1F33C35100AD6EA4 /* Login.storyboard in Resources */,
-				7062ED581F3B53F400E3116D /* Record.storyboard in Resources */,
 				707A30F41F33C35100AD6EA4 /* LaunchScreen.storyboard in Resources */,
 				708150F21F38A82600760DD0 /* BuildProfile.storyboard in Resources */,
 				70B363FF1F34F885000A9867 /* Assets.xcassets in Resources */,
 				707A30F31F33C35100AD6EA4 /* Info.plist in Resources */,
-				7062ED561F3B53AE00E3116D /* Home.storyboard in Resources */,
+				705C8A131F433D100004A07A /* Home.storyboard in Resources */,
+				705C8A151F433D540004A07A /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,18 +327,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70FC80D51F42311500426464 /* MyPods.swift in Sources */,
 				707A30F51F33C35100AD6EA4 /* LoginViewController.swift in Sources */,
-				70FC80D71F42312600426464 /* MyMilestones.swift in Sources */,
 				707A30F61F33C35100AD6EA4 /* SignUpViewController.swift in Sources */,
 				708150F41F38A83B00760DD0 /* BuildProfileViewController.swift in Sources */,
 				707A30F11F33C35100AD6EA4 /* Constants.swift in Sources */,
-				7091FF801F38EFDC00E336F4 /* RecordViewController.swift in Sources */,
-				7091FF821F38EFF000E336F4 /* ProfileViewController.swift in Sources */,
 				707A30F91F33C45E00AD6EA4 /* AuthService.swift in Sources */,
+				705C8A0F1F43379A0004A07A /* HistoryViewController.swift in Sources */,
+				705C8A111F4337B50004A07A /* ProfileViewController.swift in Sources */,
 				707A30EE1F33C35100AD6EA4 /* UserService.swift in Sources */,
+				705C8A191F4382A90004A07A /* PodStorage.swift in Sources */,
 				707A30EA1F33C35100AD6EA4 /* AppDelegate.swift in Sources */,
 				707A30EC1F33C35100AD6EA4 /* Helpers.swift in Sources */,
+				705C8A1B1F4388130004A07A /* Pods.swift in Sources */,
 				707A30ED1F33C35100AD6EA4 /* User.swift in Sources */,
 				7062ED541F3B522D00E3116D /* HomeViewController.swift in Sources */,
 			);

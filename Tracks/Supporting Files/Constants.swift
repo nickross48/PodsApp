@@ -15,4 +15,10 @@ struct Constants {
         static let name = "name"
         static let email = "email"
     }
+    
+    struct PodDefaults {
+        static let pid = "pid"
+        static let podName = "podName"
+    }
+    
 }
