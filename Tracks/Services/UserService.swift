@@ -30,22 +30,7 @@ struct UserService {
             })
         }
     }
-    static func create(_ firUser: FIRUser, name: String, completion: @escaping (User?) -> Void) {
-        let userAttrs = ["name": name]
-        
-        let ref = Database.database().reference().child("users").child(firUser.uid)
-        ref.setValue(userAttrs) { (error, ref) in
-            if let error = error {
-                assertionFailure(error.localizedDescription)
-                return completion(nil)
-            }
-            
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                let user = User(snapshot: snapshot)
-                completion(user)
-            })
-        }
-    }
+    
     static func show(forUID uid: String, completion: @escaping (User?) -> Void) {
         let ref = Database.database().reference().child("Users").child(uid)
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -57,3 +42,28 @@ struct UserService {
         })
     }
 }
+
+
+
+
+
+
+
+/*
+ static func create(_ firUser: FIRUser, name: String, completion: @escaping (User?) -> Void) {
+ let userAttrs = ["name": name]
+ 
+ let ref = Database.database().reference().child("users").child(firUser.uid)
+ ref.setValue(userAttrs) { (error, ref) in
+ if let error = error {
+ assertionFailure(error.localizedDescription)
+ return completion(nil)
+ }
+ 
+ ref.observeSingleEvent(of: .value, with: { (snapshot) in
+ let user = User(snapshot: snapshot)
+ completion(user)
+ })
+ }
+ }
+ */

@@ -11,9 +11,9 @@
 		705C8A111F4337B50004A07A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C8A101F4337B50004A07A /* ProfileViewController.swift */; };
 		705C8A131F433D100004A07A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705C8A121F433D100004A07A /* Home.storyboard */; };
 		705C8A151F433D540004A07A /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705C8A141F433D540004A07A /* History.storyboard */; };
-		705C8A191F4382A90004A07A /* PodStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C8A181F4382A90004A07A /* PodStorage.swift */; };
 		705C8A1B1F4388130004A07A /* Pods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C8A1A1F4388130004A07A /* Pods.swift */; };
 		7062ED541F3B522D00E3116D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7062ED531F3B522D00E3116D /* HomeViewController.swift */; };
+		707A146B1F44972800870CDE /* PodsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A146A1F44972800870CDE /* PodsService.swift */; };
 		707A30EA1F33C35100AD6EA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30D51F33C35000AD6EA4 /* AppDelegate.swift */; };
 		707A30EC1F33C35100AD6EA4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30D91F33C35000AD6EA4 /* Helpers.swift */; };
 		707A30ED1F33C35100AD6EA4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30DB1F33C35000AD6EA4 /* User.swift */; };
@@ -40,9 +40,9 @@
 		705C8A101F4337B50004A07A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		705C8A121F433D100004A07A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		705C8A141F433D540004A07A /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
-		705C8A181F4382A90004A07A /* PodStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodStorage.swift; sourceTree = "<group>"; };
 		705C8A1A1F4388130004A07A /* Pods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pods.swift; sourceTree = "<group>"; };
 		7062ED531F3B522D00E3116D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		707A146A1F44972800870CDE /* PodsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodsService.swift; sourceTree = "<group>"; };
 		707A30D51F33C35000AD6EA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		707A30D91F33C35000AD6EA4 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		707A30DB1F33C35000AD6EA4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 			children = (
 				707A30F81F33C45E00AD6EA4 /* AuthService.swift */,
 				707A30DD1F33C35000AD6EA4 /* UserService.swift */,
-				705C8A181F4382A90004A07A /* PodStorage.swift */,
+				707A146A1F44972800870CDE /* PodsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -334,8 +334,8 @@
 				707A30F91F33C45E00AD6EA4 /* AuthService.swift in Sources */,
 				705C8A0F1F43379A0004A07A /* HistoryViewController.swift in Sources */,
 				705C8A111F4337B50004A07A /* ProfileViewController.swift in Sources */,
+				707A146B1F44972800870CDE /* PodsService.swift in Sources */,
 				707A30EE1F33C35100AD6EA4 /* UserService.swift in Sources */,
-				705C8A191F4382A90004A07A /* PodStorage.swift in Sources */,
 				707A30EA1F33C35100AD6EA4 /* AppDelegate.swift in Sources */,
 				707A30EC1F33C35100AD6EA4 /* Helpers.swift in Sources */,
 				705C8A1B1F4388130004A07A /* Pods.swift in Sources */,

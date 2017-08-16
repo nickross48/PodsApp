@@ -111,7 +111,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="defaultPods" destination="lGT-4S-3nS" id="oMr-ej-tX5"/>
+                        <outlet property="customPod1" destination="O2v-Aj-hhh" id="TZU-GH-AuD"/>
+                        <outlet property="customPod2" destination="HoU-O2-Zk8" id="1Qa-wM-i0G"/>
+                        <outlet property="customPod3" destination="aNv-Di-fj4" id="daW-WI-mEg"/>
+                        <outlet property="customPod4" destination="6Mj-KY-Lm6" id="nJv-TR-SdI"/>
+                        <outlet property="customPod5" destination="dXi-dg-ntb" id="NG1-St-i4z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ir-AZ-bD7" userLabel="First Responder" sceneMemberID="firstResponder"/>

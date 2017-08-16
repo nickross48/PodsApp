@@ -10,6 +10,12 @@ import UIKit
 
 class BuildProfileViewController: UIViewController {
     
+    @IBOutlet weak var customPod1: UITextField!
+    @IBOutlet weak var customPod2: UITextField!
+    @IBOutlet weak var customPod3: UITextField!
+    @IBOutlet weak var customPod4: UITextField!
+    @IBOutlet weak var customPod5: UITextField!
+
     
     
     
