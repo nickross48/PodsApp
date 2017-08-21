@@ -16,31 +16,35 @@ class User: NSObject {
     let uid: String
     let name: String
     let email: String
+    let podListID: String
     
     var dictValue: [String : Any] {
         return [ "name": name,
-                "email" : email]
+                "email" : email,
+                "podListID" : podListID]
     }
-    
     
     // MARK: - Init
     
-    init(uid: String, name: String, email: String) {
+    init(uid: String, name: String, email: String, podListID: String) {
         self.uid = uid
         self.name = name
         self.email = email
+        self.podListID = podListID
         super.init()
     }
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
             let name = dict["name"] as? String,
-            let email = dict["email"] as? String
+            let email = dict["email"] as? String,
+            let podListID = dict["podListID"] as? String
             else { return nil }
         
         self.uid = snapshot.key
         self.name = name
         self.email = email
+        self.podListID = podListID
         
         super.init()
     }
@@ -50,12 +54,14 @@ class User: NSObject {
     required init?(coder aDecoder: NSCoder) {
         guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
             let name = aDecoder.decodeObject(forKey: Constants.UserDefaults.name) as? String,
-            let email = aDecoder.decodeObject(forKey: Constants.UserDefaults.email) as? String
+            let email = aDecoder.decodeObject(forKey: Constants.UserDefaults.email) as? String,
+            let podListID = aDecoder.decodeObject(forKey: Constants.UserDefaults.podListID) as? String
             else { return nil }
         
         self.uid = uid
         self.name = name
         self.email = email
+        self.podListID = podListID
         
         super.init()
     }
@@ -75,6 +81,7 @@ class User: NSObject {
         // 4
         return currentUser
     }
+
     
     // MARK: - Class Methods
     
@@ -98,5 +105,7 @@ extension User: NSCoding {
         aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
         aCoder.encode(name, forKey: Constants.UserDefaults.name)
         aCoder.encode(email, forKey: Constants.UserDefaults.email)
+        aCoder.encode(podListID, forKey: Constants.UserDefaults.podListID)
     }
+    
 }

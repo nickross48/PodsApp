@@ -8,15 +8,67 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseCore
+import FirebaseAuth.FIRUser
+
+struct PodsService{
+    
+    static func create(podName: String, completion: @escaping(String) -> Void) {
+        
+        let userAttrs = ["podName": podName] as [String : Any]
+        
+        let ref = Database.database().reference().child("users").child(User.current.uid).child("pods").childByAutoId()
+        ref.updateChildValues(userAttrs) { (error, ref)  in
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+            }
+            completion(ref.key)
+        }
+        
+        /*
+        let locref = ref.child("location")
+        locref.setValue(location.dictValue) { (error, locref) in
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+                return completion(ref.key)
+            }
+        }
+        */
+        
+        
+    }
+    
+    static func show(forKey depKey: String, posterUID: String, completion: @escaping (Pods?) -> Void) {
+        
+        let ref = Database.database().reference().child("users").child(User.current.uid).child("pods").child(depKey)
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let deposit = Pods(snapshot: snapshot) else {
+                return completion(nil)
+            }
+            completion(deposit)
+        })
+    }
+    
+    
+    
+}
+
+
+
+/*
+import Foundation
+import FirebaseDatabase
 import FirebaseAuth.FIRUser
 
 struct PodsService {
-    static func createPods (_ firUser: FIRUser, podName: String, completion: @escaping (Pods?) -> Void) {
+    static func createPods (pid: String, podName: String, completion: @escaping (Pods?) -> Void) {
         
         let podAttrs = ["podName": podName]
         
+        let ref = Database.database().reference().child("pods").childByAutoId()
+        let pid = ref.key
         
-        let ref = Database.database().reference().child("pods").child(firUser.uid)
         ref.setValue(podAttrs) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
@@ -35,6 +87,12 @@ struct PodsService {
     }
     
 }
+*/
+
+
+
+
+// let ref = Database.database().reference().child("pods").child(firUser.uid)
 
 
 // from UserService.swift

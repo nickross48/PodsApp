@@ -11,11 +11,11 @@ import FirebaseDatabase
 import FirebaseAuth.FIRUser
 
 struct UserService {
-    static func create(_ firUser: FIRUser, name: String, email: String, completion: @escaping (User?) -> Void) {
+    
+    static func create(_ firUser: FIRUser, name: String, email: String, podListID: String, completion: @escaping (User?) -> Void) {
         // let userAttrs = User.userDict
         
-        let userAttrs = ["name": name, "email": email]
-        
+        let userAttrs = ["name": name, "email": email, "podListID": podListID]
         
         let ref = Database.database().reference().child("users").child(firUser.uid)
         ref.setValue(userAttrs) { (error, ref) in

@@ -15,12 +15,26 @@ typealias FIRUser = FirebaseAuth.User
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var nameTextField: UITextField!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        nameTextField.layer.borderColor = UIColor.white.cgColor
+        nameTextField.layer.borderWidth = 1.0
+        nameTextField.layer.cornerRadius = 8.0
+        
+        passwordTextField.layer.borderColor = UIColor.white.cgColor
+        passwordTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.cornerRadius = 8.0
+        
+        emailTextField.layer.borderColor = UIColor.white.cgColor
+        emailTextField.layer.borderWidth = 1.0
+        emailTextField.layer.cornerRadius = 8.0
+        
         createButton.layer.cornerRadius = 6
     }
     
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var createButton: UIButton!
@@ -28,7 +42,11 @@ class SignUpViewController: UIViewController {
     @IBAction func createButtonTapped(_ sender: UIButton) {
         guard let password = passwordTextField.text,
             let email = emailTextField.text,
-            let name = nameTextField.text
+            let name = nameTextField.text,
+            let podListID = nameTextField.text
+
+            // LINE 32 IS NOT CORRECT
+        
             else {
                 return
         }
@@ -49,9 +67,9 @@ class SignUpViewController: UIViewController {
                     return
                 }
                 
-                UserService.create(firUser, name: name, email: email) { (user) in
+                UserService.create(firUser, name: name, email: email, podListID: podListID) { (user) in
                     guard let user = user else {
-                        // handle error
+                        // handle error... Podlistservice.create(...)
                         return
                     }
                     

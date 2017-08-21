@@ -1,5 +1,5 @@
 //
-//  Pods.swift
+//  PodList.swift
 //  Tracks
 //
 //  Created by Nicholas Ross on 2017-08-15.
@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseDatabase.FIRDataSnapshot
 
-class Pods: NSObject {
+class PodList: NSObject {
     
     // MARK: - Properties
     
@@ -55,7 +55,7 @@ class Pods: NSObject {
     
 }
 
-extension Pods: NSCoding {
+extension PodList: NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(pid, forKey: Constants.PodDefaults.pid)
         aCoder.encode(podName, forKey: Constants.PodDefaults.podName)

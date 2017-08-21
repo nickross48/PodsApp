@@ -15,10 +15,20 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailField.layer.borderColor = UIColor.white.cgColor
+        emailField.layer.borderWidth = 1.0
+        emailField.layer.cornerRadius = 8.0
+        
+        passwordField.layer.borderColor = UIColor.white.cgColor
+        passwordField.layer.borderWidth = 1.0
+        passwordField.layer.cornerRadius = 8.0
+        
+        signInButton.layer.cornerRadius = 6
     }
     
     
