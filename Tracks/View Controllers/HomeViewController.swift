@@ -12,7 +12,13 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // need to pull the list of pods tied to the user
-    var userPods = [Pods]()
+    var userPods = [Pods]() {
+        didSet {
+            homeTableView.reloadData()
+        }
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -25,8 +31,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "recordPodsDateCell", for: indexPath) as! RecordPodsTableViewCell
-        cell.podNameLabel.text = "Test label"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recordPodsCell", for: indexPath) as! RecordPodsTableViewCell
+        cell.podNameLabel.text = userPods[indexPath.row].podName
         return cell
     }
 
@@ -42,6 +48,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var dateLabel: UILabel!
     
 
+    func configureTableView() {
+        // remove separators for empty cells
+        homeTableView.tableFooterView = UIView()
+        // remove separators from cells
+        homeTableView.separatorStyle = .none
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +64,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         dateFormatter.dateFormat = "dd.MM.YY"
         let dateString = dateFormatter.string(from: currDate)
         dateLabel.text! = dateString
+        
+        PodsService.retrievePods(userID: User.current.uid, completion: { (pods) in
+            if let arrayOfPods = pods {
+                self.userPods = arrayOfPods }
+            else {
+                print ("error")
+            }
+            
+        })
     }
     
     override func didReceiveMemoryWarning() {

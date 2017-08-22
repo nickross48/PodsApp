@@ -26,68 +26,79 @@ struct PodsService{
         }
         
         /*
-        let locref = ref.child("location")
-        locref.setValue(location.dictValue) { (error, locref) in
-            if let error = error {
-                assertionFailure(error.localizedDescription)
-                return completion(ref.key)
-            }
-        }
-        */
+         let locref = ref.child("location")
+         locref.setValue(location.dictValue) { (error, locref) in
+         if let error = error {
+         assertionFailure(error.localizedDescription)
+         return completion(ref.key)
+         }
+         }
+         */
         
         
     }
     
-    static func show(forKey depKey: String, posterUID: String, completion: @escaping (Pods?) -> Void) {
+
+    
+    static func retrievePods(userID: String, completion: @escaping ([Pods]?) -> Void) {
         
-        let ref = Database.database().reference().child("users").child(User.current.uid).child("pods").child(depKey)
+        let ref = Database.database().reference().child("users").child(User.current.uid).child("pods")
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let deposit = Pods(snapshot: snapshot) else {
-                return completion(nil)
+            guard let snapshotArray = snapshot.children.allObjects as? [DataSnapshot]
+                else {
+                    return completion(nil)
             }
-            completion(deposit)
+            
+            var arrayOfPods = [Pods]()
+            
+            for podSnapshot in snapshotArray {
+                guard let pod = Pods(snapshot: podSnapshot)
+                    else { return completion([]) }
+                
+                arrayOfPods.append(pod)
+            }
+            completion(arrayOfPods)
+            
+            
         })
     }
     
-    
-    
 }
-
 
 
 /*
-import Foundation
-import FirebaseDatabase
-import FirebaseAuth.FIRUser
-
-struct PodsService {
-    static func createPods (pid: String, podName: String, completion: @escaping (Pods?) -> Void) {
-        
-        let podAttrs = ["podName": podName]
-        
-        let ref = Database.database().reference().child("pods").childByAutoId()
-        let pid = ref.key
-        
-        ref.setValue(podAttrs) { (error, ref) in
-            if let error = error {
-                assertionFailure(error.localizedDescription)
-                return completion(nil)
-            }
-            
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                let pods = Pods(snapshot: snapshot)
-                completion(pods)
-            })
-        }
-        
-        
-        
-        
-    }
-    
-}
-*/
+ import Foundation
+ import FirebaseDatabase
+ import FirebaseAuth.FIRUser
+ 
+ struct PodsService {
+ static func createPods (pid: String, podName: String, completion: @escaping (Pods?) -> Void) {
+ 
+ let podAttrs = ["podName": podName]
+ 
+ let ref = Database.database().reference().child("pods").childByAutoId()
+ let pid = ref.key
+ 
+ ref.setValue(podAttrs) { (error, ref) in
+ if let error = error {
+ assertionFailure(error.localizedDescription)
+ return completion(nil)
+ }
+ 
+ ref.observeSingleEvent(of: .value, with: { (snapshot) in
+ let pods = Pods(snapshot: snapshot)
+ completion(pods)
+ })
+ }
+ 
+ 
+ 
+ 
+ }
+ 
+ }
+ */
 
 
 
@@ -115,4 +126,18 @@ struct PodsService {
 //        })
 //    }
 //}
+
+
+
+//    static func show(forKey depKey: String, posterUID: String, completion: @escaping (Pods?) -> Void) {
+//
+//        let ref = Database.database().reference().child("users").child(User.current.uid).child("pods").child(depKey)
+//
+//        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+//            guard let deposit = Pods(snapshot: snapshot) else {
+//                return completion(nil)
+//            }
+//            completion(deposit)
+//        })
+//    }
 
