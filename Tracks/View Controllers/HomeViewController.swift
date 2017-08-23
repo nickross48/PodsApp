@@ -18,16 +18,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
         return userPods.count
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -36,7 +33,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
 
-        //        RecordPodsTableViewCell.podNameLabel.text = "TestPod"
+//        RecordPodsTableViewCell.podNameLabel.text = "TestPod"
 
         
 //            UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "currentDateCell")
@@ -46,6 +43,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var homeTableView: UITableView!
     
     @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var addPodsButton: UIBarButtonItem!
+    @IBAction func addPodsButtonClicked(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var profileButton: UIBarButtonItem!
+    @IBAction func profileButtonClicked(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var recordDataButton: UIButton!
+    @IBAction func recordDataButtonClicked(_ sender: Any) {
+    }
+    
+    
+    
     
 
     func configureTableView() {
@@ -79,6 +91,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     
 }

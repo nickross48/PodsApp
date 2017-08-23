@@ -39,15 +39,36 @@ class BuildProfileViewController: UIViewController {
         } else {
             // create pod and tie to currentUser
             
-            PodsService.create(podName: customPod1.text!, completion: {_ in})
-            PodsService.create(podName: customPod2.text!, completion: {_ in})
-            PodsService.create(podName: customPod3.text!, completion: {_ in})
-            PodsService.create(podName: customPod4.text!, completion: {_ in})
-            PodsService.create(podName: customPod5.text!, completion: {_ in})
+            if customPod1.text! != "" {
+                PodsService.create(podName: customPod1.text!, completion: {_ in})
+            } else {
+                print("This field is blank")
+            }
+            
+            if customPod2.text! != "" {
+                PodsService.create(podName: customPod2.text!, completion: {_ in})
+            } else {
+                print("This field is blank")
+            }
+            if customPod3.text! != "" {
+                PodsService.create(podName: customPod3.text!, completion: {_ in})
+            } else {
+                print("This field is blank")
+            }
+
+            if customPod4.text! != "" {
+                PodsService.create(podName: customPod4.text!, completion: {_ in})
+            } else {
+                print("This field is blank")
+            }
+            
+            if customPod5.text! != "" {
+                PodsService.create(podName: customPod5.text!, completion: {_ in})
+            } else {
+                print("This field is blank")
+            }
 
             performSegue(withIdentifier: "toMain", sender: self)
-            
-            
             
         }
         

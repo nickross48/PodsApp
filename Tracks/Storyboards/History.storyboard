@@ -56,6 +56,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="History" id="LFg-29-qQW"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="nr4-IG-dxg" id="ujX-vZ-PNA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6F-rn-Hox" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,24 +11,34 @@ import UIKit
 
 class HistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var historyTableView: UITableView!
+    
+    
+    
     // need to pull the list of pods tied to the user
-    var userPods = [Pods]()
+    var userPods = [Pods]() {
+        didSet {
+            historyTableView.reloadData()
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return userPods.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return userPods.count
+        return 1
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "showPodsCell", for: indexPath) as! HistoryPodsTableViewCell
-        cell.visualizedPodNameLabel.text = "Test label"
+        cell.visualizedPodNameLabel.text = userPods[indexPath.row].podName
         return cell
     }
+    
+
     
     
     
