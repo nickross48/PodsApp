@@ -16,7 +16,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     
     // need to pull the list of pods tied to the user
-    var userPods = [Pods]() {
+    var userPods = [PodEntry]() {
         didSet {
             historyTableView.reloadData()
         }
@@ -44,6 +44,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userPods = CoreDataHelper.retrievePodEntry()
         // Do any additional setup after loading the view, typically from a nib.
     }
     

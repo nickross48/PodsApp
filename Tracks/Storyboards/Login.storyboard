@@ -203,7 +203,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createButtonTapped:" destination="1jd-bL-ddS" eventType="touchUpInside" id="9dU-sc-JEX"/>
-                                    <segue destination="aZt-tv-c6k" kind="show" identifier="toBuildProfileStoryboard" id="T0q-TQ-yh7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEX-NQ-ev5">
@@ -279,6 +278,7 @@
                         <outlet property="emailTextField" destination="rod-2o-c1I" id="uKM-9N-Cj9"/>
                         <outlet property="nameTextField" destination="9cI-ao-acf" id="C6d-Qf-B2Y"/>
                         <outlet property="passwordTextField" destination="hhf-xf-MSH" id="0ps-sd-QoD"/>
+                        <segue destination="aZt-tv-c6k" kind="show" identifier="toBuildProfileStoryboard" id="yBa-xY-lCL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vic-Ch-M3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -299,7 +299,7 @@
                 <viewControllerPlaceholder storyboardName="BuildProfile" id="aZt-tv-c6k" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHs-FO-hpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="629"/>
+            <point key="canvasLocation" x="1236" y="31"/>
         </scene>
     </scenes>
     <resources>

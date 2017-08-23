@@ -54,7 +54,6 @@ class LoginViewController: UIViewController {
             self.present(emailController, animated: true, completion: nil)
             
         } else {
-            
             Auth.auth().signIn(withEmail: email!, password: password!, completion: { (user, error) in
                 if let _ = user {
                     self.signIn()

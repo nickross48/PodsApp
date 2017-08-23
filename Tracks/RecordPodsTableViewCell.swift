@@ -15,7 +15,6 @@ class RecordPodsTableViewCell: UITableViewCell {
     @IBOutlet weak var recordPodDataTextField: UITextField!
     
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -67,7 +67,7 @@ class SignUpViewController: UIViewController {
                     return
                 }
                 
-                UserService.create(firUser, name: name, email: email, podListID: podListID) { (user) in
+                UserService.create(firUser, name: name, email: email) { (user) in
                     guard let user = user else {
                         // handle error... Podlistservice.create(...)
                         return
@@ -75,11 +75,13 @@ class SignUpViewController: UIViewController {
                     
                     User.setCurrent(user, writeToUserDefaults: true)
                     
-                    let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                    if let initialViewController = storyboard.instantiateInitialViewController() {
-                        self.view.window?.rootViewController = initialViewController
-                        self.view.window?.makeKeyAndVisible()
-                    }
+                    self.performSegue(withIdentifier: "toBuildProfileStoryboard", sender: self)
+                    
+//                    let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//                    if let initialViewController = storyboard.instantiateInitialViewController() {
+//                        self.view.window?.rootViewController = initialViewController
+//                        self.view.window?.makeKeyAndVisible()
+//                    }
                 }
             }
             

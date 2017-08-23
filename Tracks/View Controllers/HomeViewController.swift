@@ -46,19 +46,34 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var addPodsButton: UIBarButtonItem!
     @IBAction func addPodsButtonClicked(_ sender: Any) {
+
     }
     
     @IBOutlet weak var profileButton: UIBarButtonItem!
     @IBAction func profileButtonClicked(_ sender: Any) {
+        
     }
     
     @IBOutlet weak var recordDataButton: UIButton!
     @IBAction func recordDataButtonClicked(_ sender: Any) {
+        
+        for i in 0..<homeTableView.numberOfRows(inSection: 0) {
+            guard let cell = self.homeTableView.cellForRow(at: IndexPath.init(row: i, section: 0)) as! RecordPodsTableViewCell?,
+                let textValue = cell.recordPodDataTextField.text,
+                let value = Double(textValue)
+                else {return}
+            
+            
+            let podEntry = CoreDataHelper.newPodEntry()
+            podEntry.creationDate = NSDate.init()
+            podEntry.podName = cell.podNameLabel.text
+            podEntry.value = value
+            
+            CoreDataHelper.savePodEntry()
+            
+        }
+        
     }
-    
-    
-    
-    
 
     func configureTableView() {
         // remove separators for empty cells
@@ -92,11 +107,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
 }
 
+
+
+//            podEntry.creationDate = dateLabel.text!
 
 
 // used to be under tableview cell for row at

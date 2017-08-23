@@ -16,35 +16,30 @@ class User: NSObject {
     let uid: String
     let name: String
     let email: String
-    let podListID: String
-    
+
     var dictValue: [String : Any] {
         return [ "name": name,
-                "email" : email,
-                "podListID" : podListID]
+                "email" : email]
     }
     
     // MARK: - Init
     
-    init(uid: String, name: String, email: String, podListID: String) {
+    init(uid: String, name: String, email: String) {
         self.uid = uid
         self.name = name
         self.email = email
-        self.podListID = podListID
         super.init()
     }
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
             let name = dict["name"] as? String,
-            let email = dict["email"] as? String,
-            let podListID = dict["podListID"] as? String
+            let email = dict["email"] as? String
             else { return nil }
         
         self.uid = snapshot.key
         self.name = name
         self.email = email
-        self.podListID = podListID
         
         super.init()
     }
@@ -54,45 +49,40 @@ class User: NSObject {
     required init?(coder aDecoder: NSCoder) {
         guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
             let name = aDecoder.decodeObject(forKey: Constants.UserDefaults.name) as? String,
-            let email = aDecoder.decodeObject(forKey: Constants.UserDefaults.email) as? String,
-            let podListID = aDecoder.decodeObject(forKey: Constants.UserDefaults.podListID) as? String
+            let email = aDecoder.decodeObject(forKey: Constants.UserDefaults.email) as? String
             else { return nil }
         
         self.uid = uid
         self.name = name
         self.email = email
-        self.podListID = podListID
         
         super.init()
     }
     
     // MARK: - Singleton
     
-    // 1
     private static var _current: User?
     
-    // 2
+    
     static var current: User {
-        // 3
-        guard let currentUser = _current else {
+    
+        guard let currentUser = _current
+            else {
             fatalError("Error: current user doesn't exist")
         }
         
-        // 4
         return currentUser
     }
 
     
     // MARK: - Class Methods
     
-    // 1
     class func setCurrent(_ User: User, writeToUserDefaults: Bool = false) {
-        // 2
+        
         if writeToUserDefaults {
-            // 3
+            
             let data = NSKeyedArchiver.archivedData(withRootObject: User)
             
-            // 4
             UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
         }
         
@@ -105,7 +95,6 @@ extension User: NSCoding {
         aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
         aCoder.encode(name, forKey: Constants.UserDefaults.name)
         aCoder.encode(email, forKey: Constants.UserDefaults.email)
-        aCoder.encode(podListID, forKey: Constants.UserDefaults.podListID)
     }
     
 }
