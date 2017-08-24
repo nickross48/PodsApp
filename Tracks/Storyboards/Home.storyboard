@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,9 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Owm-aU-PNF">
-                                <rect key="frame" x="0.0" y="101" width="375" height="471"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Owm-aU-PNF">
+                                <rect key="frame" x="0.0" y="32" width="375" height="540"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recordPodsCell" rowHeight="60" id="nqn-uu-Ffu" customClass="RecordPodsTableViewCell" customModule="Tracks" customModuleProvider="target">
@@ -60,25 +61,44 @@
                                     <outlet property="delegate" destination="YCp-mz-C82" id="ZvR-xu-JoY"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUL-Gc-SGx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUL-Gc-SGx">
                                 <rect key="frame" x="16" y="72" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUa-eU-x4G">
-                                <rect key="frame" x="135" y="580" width="105" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Record data"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUa-eU-x4G">
+                                <rect key="frame" x="84" y="563" width="207" height="38"/>
+                                <color key="backgroundColor" red="0.64313725489999995" green="0.0" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bUa-eU-x4G" secondAttribute="height" multiplier="207:38" id="88o-c2-MGW"/>
+                                    <constraint firstAttribute="height" constant="38" id="H0d-Wl-lUj"/>
+                                    <constraint firstAttribute="width" constant="207" id="RWY-Rw-IcK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Record data">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="recordDataButtonClicked:" destination="YCp-mz-C82" eventType="touchUpInside" id="2dF-rj-HVH"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Owm-aU-PNF" secondAttribute="trailing" id="0jb-to-ocG"/>
+                            <constraint firstItem="kUL-Gc-SGx" firstAttribute="trailing" secondItem="Ruz-Bx-BWL" secondAttribute="trailingMargin" id="6Nc-1t-bUn"/>
+                            <constraint firstItem="Owm-aU-PNF" firstAttribute="top" secondItem="Ruz-Bx-BWL" secondAttribute="top" constant="32" id="9pT-NV-ttB"/>
+                            <constraint firstItem="bUa-eU-x4G" firstAttribute="centerX" secondItem="Ruz-Bx-BWL" secondAttribute="centerX" id="C1e-dl-DHz"/>
+                            <constraint firstItem="bUa-eU-x4G" firstAttribute="top" secondItem="kUL-Gc-SGx" secondAttribute="bottom" constant="470" id="JNq-yI-Hz2"/>
+                            <constraint firstItem="Owm-aU-PNF" firstAttribute="leading" secondItem="Ruz-Bx-BWL" secondAttribute="leading" id="SH4-h5-Q9v"/>
+                            <constraint firstItem="OmE-Sx-Ibc" firstAttribute="top" secondItem="bUa-eU-x4G" secondAttribute="bottom" constant="17" id="aQV-MA-GRP"/>
+                            <constraint firstItem="kUL-Gc-SGx" firstAttribute="top" secondItem="vgZ-VI-C2w" secondAttribute="bottom" constant="8" id="acs-vJ-k2K"/>
+                            <constraint firstItem="kUL-Gc-SGx" firstAttribute="leading" secondItem="Ruz-Bx-BWL" secondAttribute="leadingMargin" id="eYe-rT-d5O"/>
+                            <constraint firstItem="OmE-Sx-Ibc" firstAttribute="top" secondItem="Owm-aU-PNF" secondAttribute="bottom" constant="46" id="mrS-Nc-cod"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pods" id="Yxw-sd-HUi">
+                    <navigationItem key="navigationItem" title="Record Pods" id="Yxw-sd-HUi">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="XSW-LA-MWo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8f9-Zr-cLV">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
@@ -116,7 +136,7 @@
         <scene sceneID="o5A-KX-eKf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="by0-ih-Mlj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" selectedImage="icons8-Home-40" id="pJH-Ha-AjP">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-Home-40" id="pJH-Ha-AjP">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -138,4 +158,5 @@
     <resources>
         <image name="icons8-Home-40" width="40" height="40"/>
     </resources>
+    <color key="tintColor" red="0.64313725490196072" green="0.0" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -57,6 +57,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var recordDataButton: UIButton!
     @IBAction func recordDataButtonClicked(_ sender: Any) {
         
+        
         for i in 0..<homeTableView.numberOfRows(inSection: 0) {
             guard let cell = self.homeTableView.cellForRow(at: IndexPath.init(row: i, section: 0)) as! RecordPodsTableViewCell?,
                 let textValue = cell.recordPodDataTextField.text,
@@ -91,6 +92,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         dateFormatter.dateFormat = "dd.MM.YY"
         let dateString = dateFormatter.string(from: currDate)
         dateLabel.text! = dateString
+        
+        recordDataButton.layer.cornerRadius = 6
         
         PodsService.retrievePods(userID: User.current.uid, completion: { (pods) in
             if let arrayOfPods = pods {

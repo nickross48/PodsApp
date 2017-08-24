@@ -11,6 +11,7 @@ import UIKit
 class PodHistory: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
+    @IBOutlet weak var podHistoryTitle: UINavigationBar!
     @IBOutlet weak var podHistoryTableView: UITableView!
     
     var userPods = [PodEntry]()
@@ -24,6 +25,7 @@ class PodHistory: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "podHistoryCell", for: indexPath) as! PodHistoryTableViewCell
         cell.podsTrackedValueLabel.text = String(userPods[indexPath.row].value)
         cell.podTrackedDateLabel.text = String(describing: userPods[indexPath.row].creationDate)
+//         = String(describing: userPods[indexPath.row].podName)
         return cell
     }
     

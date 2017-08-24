@@ -42,10 +42,7 @@ class SignUpViewController: UIViewController {
     @IBAction func createButtonTapped(_ sender: UIButton) {
         guard let password = passwordTextField.text,
             let email = emailTextField.text,
-            let name = nameTextField.text,
-            let podListID = nameTextField.text
-
-            // LINE 32 IS NOT CORRECT
+            let name = nameTextField.text
         
             else {
                 return
