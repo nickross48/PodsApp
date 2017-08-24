@@ -30,12 +30,14 @@
 		707A30F91F33C45E00AD6EA4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A30F81F33C45E00AD6EA4 /* AuthService.swift */; };
 		708150F21F38A82600760DD0 /* BuildProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708150F11F38A82600760DD0 /* BuildProfile.storyboard */; };
 		708150F41F38A83B00760DD0 /* BuildProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708150F31F38A83B00760DD0 /* BuildProfileViewController.swift */; };
+		709EA05B1F4F312800695242 /* PodHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709EA05A1F4F312800695242 /* PodHistory.swift */; };
 		70B363FF1F34F885000A9867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B363FE1F34F885000A9867 /* Assets.xcassets */; };
 		70B7A1D71F47412C0055A033 /* RecordPodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7A1D61F47412C0055A033 /* RecordPodsTableViewCell.swift */; };
 		70D133A31F4DC5FE001C5676 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D133A21F4DC5FE001C5676 /* CoreDataHelper.swift */; };
 		70D133A61F4DC9C1001C5676 /* MakePods.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70D133A41F4DC9C1001C5676 /* MakePods.xcdatamodeld */; };
 		70D133A81F4DECE5001C5676 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D133A71F4DECE5001C5676 /* Storyboard+Utility.swift */; };
 		70D133AA1F4DFE10001C5676 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D133A91F4DFE10001C5676 /* Date.swift */; };
+		70E129561F4F5D24005FC937 /* PodHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E129551F4F5D24005FC937 /* PodHistoryTableViewCell.swift */; };
 		D61609A56A26156BEC6C91A2 /* Pods_Tracks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842CD6F7599AB8E1E08C2A5 /* Pods_Tracks.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,12 +67,14 @@
 		707A30F81F33C45E00AD6EA4 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		708150F11F38A82600760DD0 /* BuildProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BuildProfile.storyboard; sourceTree = "<group>"; };
 		708150F31F38A83B00760DD0 /* BuildProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildProfileViewController.swift; sourceTree = "<group>"; };
+		709EA05A1F4F312800695242 /* PodHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodHistory.swift; sourceTree = "<group>"; };
 		70B363FE1F34F885000A9867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70B7A1D61F47412C0055A033 /* RecordPodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordPodsTableViewCell.swift; sourceTree = "<group>"; };
 		70D133A21F4DC5FE001C5676 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		70D133A51F4DC9C1001C5676 /* MakePods.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MakePods.xcdatamodel; sourceTree = "<group>"; };
 		70D133A71F4DECE5001C5676 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		70D133A91F4DFE10001C5676 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		70E129551F4F5D24005FC937 /* PodHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		A34400D17168E84A85DA7AB8 /* Pods-Tracks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tracks/Pods-Tracks.debug.xcconfig"; sourceTree = "<group>"; };
 		E59E1862AED0F0AD2E78A36E /* Pods-Tracks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tracks/Pods-Tracks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +205,7 @@
 				7062ED531F3B522D00E3116D /* HomeViewController.swift */,
 				705C8A0E1F43379A0004A07A /* HistoryViewController.swift */,
 				705C8A101F4337B50004A07A /* ProfileViewController.swift */,
+				709EA05A1F4F312800695242 /* PodHistory.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 		70B7A1D81F4741300055A033 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				70E129551F4F5D24005FC937 /* PodHistoryTableViewCell.swift */,
 				70B7A1D61F47412C0055A033 /* RecordPodsTableViewCell.swift */,
 				706A66101F4C7BFD00E54276 /* HistoryTableViewCell.swift */,
 			);
@@ -363,6 +369,7 @@
 				705C8A0F1F43379A0004A07A /* HistoryViewController.swift in Sources */,
 				705C8A111F4337B50004A07A /* ProfileViewController.swift in Sources */,
 				707A146B1F44972800870CDE /* PodsService.swift in Sources */,
+				70E129561F4F5D24005FC937 /* PodHistoryTableViewCell.swift in Sources */,
 				707A30EE1F33C35100AD6EA4 /* UserService.swift in Sources */,
 				70D133AA1F4DFE10001C5676 /* Date.swift in Sources */,
 				706A66111F4C7BFD00E54276 /* HistoryTableViewCell.swift in Sources */,
@@ -372,6 +379,7 @@
 				705C8A1B1F4388130004A07A /* Pods.swift in Sources */,
 				70D133A61F4DC9C1001C5676 /* MakePods.xcdatamodeld in Sources */,
 				707A30ED1F33C35100AD6EA4 /* User.swift in Sources */,
+				709EA05B1F4F312800695242 /* PodHistory.swift in Sources */,
 				7062ED541F3B522D00E3116D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

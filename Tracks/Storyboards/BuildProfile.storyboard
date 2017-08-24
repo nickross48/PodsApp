@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,24 +25,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purpleGradient" translatesAutoresizingMaskIntoConstraints="NO" id="fBC-y4-NcD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozp-jO-WyR">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozp-jO-WyR">
                                 <rect key="frame" x="179" y="574" width="16" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="whiteChevron"/>
                                 <connections>
                                     <action selector="toHomeButtonPressed:" destination="Chq-cv-sHv" eventType="touchUpInside" id="taR-ED-K5j"/>
                                     <segue destination="EUQ-7n-R6x" kind="show" identifier="toMain" id="aDm-ej-rtw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your pods are always customizable, now or later! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENA-58-CNc">
-                                <rect key="frame" x="64" y="615" width="247" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="custom pods" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4t-aT-FU5">
-                                <rect key="frame" x="37" y="114" width="168" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="what would you like to track?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4t-aT-FU5">
+                                <rect key="frame" x="37" y="63" width="235" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,13 +70,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Start with five pods but add more later!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENA-58-CNc">
+                                <rect key="frame" x="64" y="631" width="247" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fBC-y4-NcD" secondAttribute="trailing" id="2tg-n4-Lhe"/>
+                            <constraint firstItem="ENA-58-CNc" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leadingMargin" constant="48" id="HER-G9-GeK"/>
+                            <constraint firstItem="ENA-58-CNc" firstAttribute="top" secondItem="Ozp-jO-WyR" secondAttribute="bottom" constant="24" id="U67-09-bb6"/>
+                            <constraint firstItem="BiC-6p-hPn" firstAttribute="top" secondItem="ENA-58-CNc" secondAttribute="bottom" constant="20" id="Ul3-jX-IOd"/>
                             <constraint firstItem="fBC-y4-NcD" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leading" id="X5q-Qt-q9T"/>
                             <constraint firstItem="BiC-6p-hPn" firstAttribute="top" secondItem="fBC-y4-NcD" secondAttribute="bottom" id="Yvu-NK-tt9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ENA-58-CNc" secondAttribute="trailing" constant="48" id="eXb-rD-Rgu"/>
+                            <constraint firstItem="Ozp-jO-WyR" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leadingMargin" constant="163" id="ezf-h3-osJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ozp-jO-WyR" secondAttribute="trailing" constant="164" id="iry-Or-8ai"/>
                             <constraint firstItem="fBC-y4-NcD" firstAttribute="top" secondItem="Sbz-8i-Nuw" secondAttribute="top" id="yBh-tQ-Tsw"/>
+                            <constraint firstItem="Ozp-jO-WyR" firstAttribute="top" secondItem="Sbz-8i-Nuw" secondAttribute="topMargin" constant="574" id="yV0-fA-yqD"/>
                         </constraints>
                     </view>
                     <connections>

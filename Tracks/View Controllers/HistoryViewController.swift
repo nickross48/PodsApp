@@ -16,14 +16,20 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     
     // need to pull the list of pods tied to the user
-    var userPods = [PodEntry]() {
+    var userPods = [Pods]() {
         didSet {
             historyTableView.reloadData()
         }
     }
     
+    var podEntries = [PodEntry]()
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userPods.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toHistoryDisplay", sender: self)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,11 +46,35 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     
 
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toHistoryDisplay" {
+            let selectedIndexPath = historyTableView.indexPathForSelectedRow
+            let vc = segue.destination as! PodHistory
+            vc.userPods = podEntries.filter({ (currentPodEntry) in
+                return currentPodEntry.podName! == userPods[(selectedIndexPath?.row)!].podName
+            })
+            
+        }
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        PodsService.retrievePods(userID: User.current.uid, completion: { (pods) in
+            if let arrayOfPods = pods {
+                self.userPods = arrayOfPods }
+            else {
+                print ("error")
+            }
+            
+        })
+        
+        podEntries = CoreDataHelper.retrievePodEntry()
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userPods = CoreDataHelper.retrievePodEntry()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
