@@ -34,7 +34,7 @@ class CoreDataHelper {
     }
     
     static func retrievePodEntry() -> [PodEntry] {
-        let fetchRequest = NSFetchRequest<PodEntry>(entityName: "Pods")
+        let fetchRequest = NSFetchRequest<PodEntry>(entityName: "PodEntry")
         do {
             let results = try managedContext.fetch(fetchRequest)
             return results

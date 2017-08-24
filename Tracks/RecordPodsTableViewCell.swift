@@ -26,4 +26,8 @@ class RecordPodsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.recordPodDataTextField.resignFirstResponder()
+    }
+    
 }

@@ -23,22 +23,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tracks/View Controllers/HomeViewController.swift"
-            timestampString = "525213416.33327"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "recordDataButtonClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Tracks/View Controllers/SignUpViewController.swift"
             timestampString = "525211152.444228"
             startingColumnNumber = "9223372036854775807"
@@ -56,7 +40,7 @@
                   moduleName = "Tracks"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nicholasross/Desktop/MS/PodsApp/Tracks/View%20Controllers/SignUpViewController.swift"
-                  timestampString = "525213549.78847"
+                  timestampString = "525214259.694665"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "85"
@@ -71,7 +55,7 @@
                   moduleName = "Tracks"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nicholasross/Desktop/MS/PodsApp/Tracks/View%20Controllers/SignUpViewController.swift"
-                  timestampString = "525213549.796873"
+                  timestampString = "525214259.701324"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "85"
@@ -79,22 +63,6 @@
                   offsetFromSymbolStart = "221">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tracks/View Controllers/HomeViewController.swift"
-            timestampString = "525213416.33327"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "recordDataButtonClicked(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

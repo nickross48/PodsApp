@@ -87,5 +87,13 @@ class BuildProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.customPod1.resignFirstResponder()
+        self.customPod2.resignFirstResponder()
+        self.customPod3.resignFirstResponder()
+        self.customPod4.resignFirstResponder()
+        self.customPod5.resignFirstResponder()
+    }
+    
     
 }
