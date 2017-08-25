@@ -33,6 +33,7 @@
 		709EA05B1F4F312800695242 /* PodHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709EA05A1F4F312800695242 /* PodHistory.swift */; };
 		70B363FF1F34F885000A9867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B363FE1F34F885000A9867 /* Assets.xcassets */; };
 		70B7A1D71F47412C0055A033 /* RecordPodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B7A1D61F47412C0055A033 /* RecordPodsTableViewCell.swift */; };
+		70CF02BB1F50A541000A13F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70CF02BA1F50A541000A13F0 /* LaunchScreen.storyboard */; };
 		70D133A31F4DC5FE001C5676 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D133A21F4DC5FE001C5676 /* CoreDataHelper.swift */; };
 		70D133A61F4DC9C1001C5676 /* MakePods.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70D133A41F4DC9C1001C5676 /* MakePods.xcdatamodeld */; };
 		70D133A81F4DECE5001C5676 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D133A71F4DECE5001C5676 /* Storyboard+Utility.swift */; };
@@ -70,6 +71,7 @@
 		709EA05A1F4F312800695242 /* PodHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodHistory.swift; sourceTree = "<group>"; };
 		70B363FE1F34F885000A9867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70B7A1D61F47412C0055A033 /* RecordPodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordPodsTableViewCell.swift; sourceTree = "<group>"; };
+		70CF02BA1F50A541000A13F0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70D133A21F4DC5FE001C5676 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		70D133A51F4DC9C1001C5676 /* MakePods.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MakePods.xcdatamodel; sourceTree = "<group>"; };
 		70D133A71F4DECE5001C5676 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				707A30E01F33C35000AD6EA4 /* Main.storyboard */,
 				705C8A121F433D100004A07A /* Home.storyboard */,
 				705C8A141F433D540004A07A /* History.storyboard */,
+				70CF02BA1F50A541000A13F0 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				707A30F01F33C35100AD6EA4 /* Main.storyboard in Resources */,
 				707A30F21F33C35100AD6EA4 /* GoogleService-Info.plist in Resources */,
 				707A30EF1F33C35100AD6EA4 /* Login.storyboard in Resources */,
+				70CF02BB1F50A541000A13F0 /* LaunchScreen.storyboard in Resources */,
 				707A30F41F33C35100AD6EA4 /* LaunchScreen.storyboard in Resources */,
 				708150F21F38A82600760DD0 /* BuildProfile.storyboard in Resources */,
 				70B363FF1F34F885000A9867 /* Assets.xcassets in Resources */,

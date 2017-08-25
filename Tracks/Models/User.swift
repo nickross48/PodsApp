@@ -43,9 +43,7 @@ class User: NSObject {
         
         super.init()
     }
-    
-    
-    
+
     required init?(coder aDecoder: NSCoder) {
         guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
             let name = aDecoder.decodeObject(forKey: Constants.UserDefaults.name) as? String,
@@ -62,30 +60,22 @@ class User: NSObject {
     // MARK: - Singleton
     
     private static var _current: User?
-    
-    
     static var current: User {
-    
         guard let currentUser = _current
             else {
             fatalError("Error: current user doesn't exist")
         }
-        
         return currentUser
     }
-
     
     // MARK: - Class Methods
     
     class func setCurrent(_ User: User, writeToUserDefaults: Bool = false) {
-        
         if writeToUserDefaults {
-            
             let data = NSKeyedArchiver.archivedData(withRootObject: User)
-            
             UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
+            UserDefaults.standard.synchronize()
         }
-        
         _current = User
     }
 }

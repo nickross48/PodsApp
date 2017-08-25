@@ -5,7 +5,10 @@
 //  Created by Nicholas Ross on 2017-08-09.
 //  Copyright © 2017 Nicholas Ross. All rights reserved.
 //
-
+import Foundation
+import Firebase
+import FirebaseAuthUI
+import FirebaseDatabase
 import UIKit
 
 
@@ -44,15 +47,47 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var dateLabel: UILabel!
     
+    // add pods to Firebase
     @IBOutlet weak var addPodsButton: UIBarButtonItem!
     @IBAction func addPodsButtonClicked(_ sender: Any) {
-
+        let alertController = UIAlertController(title: "Name of Pod", message: "What would you like to track?", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            let userInput = alertController.textFields![0].text
+            if (userInput!.isEmpty) {
+                return
+            } else {
+                    //Import to firebase here
+                if userInput! != "" {
+                    PodsService.create(podName: userInput!, completion: {_ in})
+                } else {
+                    print("This field is blank")
+                }
+                PodsService.retrievePods(userID: User.current.uid, completion: { (pods) in
+                    if let arrayOfPods = pods {
+                        self.userPods = arrayOfPods }
+                    else {
+                        print ("error")
+                    }
+                })
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addTextField(configurationHandler: nil)
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
     }
     
     @IBOutlet weak var profileButton: UIBarButtonItem!
     @IBAction func profileButtonClicked(_ sender: Any) {
-        
+        presentLogOut(viewContoller: self)
     }
+    
+    
+    
+    
+    
     
     @IBOutlet weak var recordDataButton: UIButton!
     @IBAction func recordDataButtonClicked(_ sender: Any) {
@@ -67,6 +102,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             let podEntry = CoreDataHelper.newPodEntry()
             podEntry.creationDate = NSDate.init()
+//            podEntry.creationDate = Date() as NSDate
             podEntry.podName = cell.podNameLabel.text
             podEntry.value = value
             
@@ -89,12 +125,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let currDate = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.YY"
+        dateFormatter.dateFormat = "MMM d, yyyy"
         let dateString = dateFormatter.string(from: currDate)
         dateLabel.text! = dateString
         
         recordDataButton.layer.cornerRadius = 6
         
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         PodsService.retrievePods(userID: User.current.uid, completion: { (pods) in
             if let arrayOfPods = pods {
                 self.userPods = arrayOfPods }
@@ -110,6 +150,61 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    
+    
+    func authListener(viewController view: UIViewController) -> AuthStateDidChangeListenerHandle{
+        let authHandle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            guard user == nil
+                else {return}
+            let storyboard = UIStoryboard(name: "LogInStoryBoard", bundle: .main)
+            guard let controller = storyboard.instantiateInitialViewController() else {
+                fatalError()
+            }
+            view.view.window?.rootViewController = controller
+            view.view.window?.makeKeyAndVisible()
+            // So in culmination with the loguserout function what this essentially does is that it lets us return to the log in storyboard when the user logs out but what is actually signing the user out of firebase is the log user out function
+        }
+        return authHandle
+    }
+    func removeAuthListener (authHandle: AuthStateDidChangeListenerHandle?)
+    {
+        if let authHandle = authHandle{
+            
+            Auth.auth().removeStateDidChangeListener(authHandle)
+            
+        }
+        // So as we know what is happening is that what a handler does is that creates and returns an action with the specified behavior so what this does is almost like a setting function because what we are essentially doing is that we are changing the code within firebase to say change the listener block to a block that essentailly tells us that the user has signed out
+    }
+    
+    func logUserOut() {
+        do{
+            try Auth.auth().signOut()
+        } catch let error as NSError {
+            assertionFailure("Error: error signing in \(error.localizedDescription)")
+            print(error.localizedDescription)
+        }
+        // So this block of code is detrimental to our code and what it  does exactly that it lets us log the user out so let us tackle this code line by line
+        // we essentially want the code to sign our the verified user and we know if the user isnt verified then they cant be signed in
+        // If their is an error with signing the user out then the error will be printed out in the console
+    }
+    
+    
+
+    func presentLogOut(viewContoller: UIViewController) {
+        let profileAlertController = UIAlertController(title: "Logout", message: "Confirm Pods logout", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
+            self.logUserOut()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        profileAlertController.addAction(confirmAction)
+        profileAlertController.addAction(cancelAction)
+        
+        present(profileAlertController, animated: true, completion: nil)
+    }
     
     
 }

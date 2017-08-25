@@ -9,14 +9,20 @@
 import UIKit
 import Firebase
 import CoreData
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+        
+        [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        
+        IQKeyboardManager.sharedManager().enable = true
+
         
         // create an instance of login storyboard that has loginVC set as initial VC
         let storyboard = UIStoryboard(name: "Login", bundle: .main)
@@ -123,3 +129,6 @@ extension AppDelegate {
 
 // <a href="https://icons8.com/icon/15/Bar-Chart">Bar chart icon credits</a>
 // link for chart icon
+
+//<a href="https://icons8.com/icon/14096/Home">Home icon credits</a>
+// link for home icon

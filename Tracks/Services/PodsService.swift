@@ -13,6 +13,14 @@ import FirebaseAuth.FIRUser
 
 struct PodsService{
     
+    
+    static func dateToString (date: NSDate) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter.string(from: date as Date)
+    }
+    
     static func create(podName: String, completion: @escaping(String) -> Void) {
         
         let userAttrs = ["podName": podName] as [String : Any]

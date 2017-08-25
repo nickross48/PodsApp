@@ -21,10 +21,16 @@ class PodHistory: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "podHistoryCell", for: indexPath) as! PodHistoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "podHistoryCell", for: indexPath) as! PodHistoryTableViewCell        
         cell.podsTrackedValueLabel.text = String(userPods[indexPath.row].value)
-        cell.podTrackedDateLabel.text = String(describing: userPods[indexPath.row].creationDate)
+        cell.podTrackedDateLabel.text = PodsService.dateToString(date: userPods[indexPath.row].creationDate!)
+        
+        
+        
+//        describing: userPods[indexPath.row].creationDate
+        
 //         = String(describing: userPods[indexPath.row].podName)
+        
         return cell
     }
     

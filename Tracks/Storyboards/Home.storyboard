@@ -104,27 +104,26 @@
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="AddPods"/>
+                                <connections>
+                                    <action selector="addPodsButtonClicked:" destination="YCp-mz-C82" eventType="touchUpInside" id="hMN-cp-ApM"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="addPodsButtonClicked:" destination="YCp-mz-C82" id="mDU-4S-3mD"/>
-                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="bFV-1Y-ht4">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="bFV-1Y-ht4">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0uk-vL-ajq">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Profile"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="profileButtonClicked:" destination="YCp-mz-C82" eventType="touchUpInside" id="tS5-dg-dCh"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="profileButtonClicked:" destination="YCp-mz-C82" id="q8m-ir-cT5"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addPodsButton" destination="XSW-LA-MWo" id="jhJ-Y4-kkn"/>
                         <outlet property="dateLabel" destination="kUL-Gc-SGx" id="Wcp-fG-7hE"/>
                         <outlet property="homeTableView" destination="Owm-aU-PNF" id="DJF-Ff-BI1"/>
-                        <outlet property="profileButton" destination="bFV-1Y-ht4" id="x9Z-U6-QhV"/>
                         <outlet property="recordDataButton" destination="bUa-eU-x4G" id="lPf-Qk-IRG"/>
                     </connections>
                 </viewController>
