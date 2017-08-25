@@ -32,6 +32,10 @@ class SignUpViewController: UIViewController {
         emailTextField.layer.cornerRadius = 8.0
         
         createButton.layer.cornerRadius = 6
+        
+        // slide view up when keyboard appears
+        NotificationCenter.default.addObserver(self, selector: #selector(SignUpViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SignUpViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -85,8 +89,31 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func pickProfilePicture(_ sender: Any) {
+    
+    
+    @IBOutlet weak var profilePictureFiller: UIImageView!
+    @IBAction func pickProfilePicture(_ sender: AnyObject) {
         
+        let image = UIImagePickerController()
+        image.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        image.allowsEditing = false
+        
+        self.present(image, animated: true)
+        {
+            
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            profilePictureFiller.image = image
+        } else {
+            print("Something went wrong")
+        }
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -94,6 +121,27 @@ class SignUpViewController: UIViewController {
         self.passwordTextField.resignFirstResponder()
         self.emailTextField.resignFirstResponder()
         self.nameTextField.resignFirstResponder()
+    }
+    
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
 }

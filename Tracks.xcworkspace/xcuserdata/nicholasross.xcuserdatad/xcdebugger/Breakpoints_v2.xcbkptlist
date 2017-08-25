@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tracks/View Controllers/SignUpViewController.swift"
-            timestampString = "525299201.92107"
+            timestampString = "525322356.327731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "createButtonTapped(_:)"
             landmarkType = "7">
             <Locations>

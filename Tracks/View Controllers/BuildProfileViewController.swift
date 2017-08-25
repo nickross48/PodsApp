@@ -95,5 +95,8 @@ class BuildProfileViewController: UIViewController {
         self.customPod5.resignFirstResponder()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
 }

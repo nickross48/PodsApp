@@ -278,6 +278,7 @@
                         <outlet property="emailTextField" destination="rod-2o-c1I" id="uKM-9N-Cj9"/>
                         <outlet property="nameTextField" destination="9cI-ao-acf" id="C6d-Qf-B2Y"/>
                         <outlet property="passwordTextField" destination="hhf-xf-MSH" id="0ps-sd-QoD"/>
+                        <outlet property="profilePictureFiller" destination="A4u-vB-EFQ" id="Oe1-oW-Y4x"/>
                         <segue destination="aZt-tv-c6k" kind="show" identifier="toBuildProfileStoryboard" id="yBa-xY-lCL"/>
                     </connections>
                 </viewController>
