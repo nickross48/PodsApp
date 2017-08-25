@@ -147,7 +147,7 @@
         <scene sceneID="mHO-58-rzo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="igL-1e-Otw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-Bar Chart-40" id="P3F-kA-1gH">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-Line Chart-35" id="P3F-kA-1gH">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -172,6 +172,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-Bar Chart-40" width="40" height="40"/>
+        <image name="icons8-Line Chart-35" width="35" height="35"/>
     </resources>
 </document>

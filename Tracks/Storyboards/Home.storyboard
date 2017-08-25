@@ -100,20 +100,30 @@
                     </view>
                     <navigationItem key="navigationItem" title="Record Pods" id="Yxw-sd-HUi">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="XSW-LA-MWo">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8f9-Zr-cLV">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8f9-Zr-cLV">
+                                <rect key="frame" x="16" y="7" width="103" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="AddPods"/>
+                                <state key="normal" image="icons8-Add-30"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="0.64313725490196072" green="0.0" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addPodsButtonClicked:" destination="YCp-mz-C82" eventType="touchUpInside" id="hMN-cp-ApM"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="bFV-1Y-ht4">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0uk-vL-ajq">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0uk-vL-ajq">
+                                <rect key="frame" x="272" y="7" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
+                                <state key="normal" image="icons8-Logout Rounded Left Filled-30"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                        <color key="value" red="0.64313725490196072" green="0.0" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="profileButtonClicked:" destination="YCp-mz-C82" eventType="touchUpInside" id="tS5-dg-dCh"/>
                                 </connections>
@@ -135,7 +145,7 @@
         <scene sceneID="o5A-KX-eKf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="by0-ih-Mlj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-Home-40" id="pJH-Ha-AjP">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-Home-35" id="pJH-Ha-AjP">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -160,7 +170,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-Home-40" width="40" height="40"/>
+        <image name="icons8-Add-30" width="15" height="15"/>
+        <image name="icons8-Home-35" width="17" height="17"/>
+        <image name="icons8-Logout Rounded Left Filled-30" width="15" height="15"/>
     </resources>
     <color key="tintColor" red="0.64313725490196072" green="0.0" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
