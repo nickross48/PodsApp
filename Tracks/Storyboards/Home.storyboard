@@ -138,6 +138,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="by0-ih-Mlj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="icons8-Home-40" id="pJH-Ha-AjP">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.64313725490196072" green="0.0" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

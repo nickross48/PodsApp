@@ -11,7 +11,6 @@ import UIKit
 class PodHistory: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
-    @IBOutlet weak var podHistoryTitle: UINavigationBar!
     @IBOutlet weak var podHistoryTableView: UITableView!
     
     var userPods = [PodEntry]()

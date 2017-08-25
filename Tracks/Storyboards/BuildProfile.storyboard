@@ -54,7 +54,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoU-O2-Zk8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoU-O2-Zk8">
                                 <rect key="frame" x="37" y="210" width="204" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NfU-Wj-d9G"/>
@@ -63,7 +63,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNv-Di-fj4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNv-Di-fj4">
                                 <rect key="frame" x="37" y="255" width="204" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8sx-vw-Ncn"/>
@@ -72,7 +72,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mj-KY-Lm6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mj-KY-Lm6">
                                 <rect key="frame" x="37" y="300" width="204" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="204" id="NyA-m8-YwD"/>
@@ -81,7 +81,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXi-dg-ntb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXi-dg-ntb">
                                 <rect key="frame" x="37" y="346" width="204" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="204" id="BNq-GD-Ryx"/>
@@ -103,10 +103,12 @@
                             <constraint firstItem="O2v-Aj-hhh" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leadingMargin" constant="21" id="3Rh-MW-rVK"/>
                             <constraint firstItem="O2v-Aj-hhh" firstAttribute="top" secondItem="t4t-aT-FU5" secondAttribute="bottom" constant="20" id="7RW-Gy-W40"/>
                             <constraint firstItem="t4t-aT-FU5" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leadingMargin" constant="21" id="8sD-sK-fEx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HoU-O2-Zk8" secondAttribute="trailing" constant="118" id="E4T-dR-Wig"/>
                             <constraint firstItem="t4t-aT-FU5" firstAttribute="top" secondItem="LGh-dt-4NI" secondAttribute="bottom" constant="43" id="Gi2-K6-sPI"/>
                             <constraint firstItem="ENA-58-CNc" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leadingMargin" constant="48" id="HER-G9-GeK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O2v-Aj-hhh" secondAttribute="trailing" constant="118" id="Phe-DZ-amL"/>
                             <constraint firstItem="Ozp-jO-WyR" firstAttribute="top" secondItem="dXi-dg-ntb" secondAttribute="bottom" constant="198" id="S3K-t2-5Zd"/>
+                            <constraint firstItem="6Mj-KY-Lm6" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leadingMargin" constant="21" id="TsG-LG-wgD"/>
                             <constraint firstItem="ENA-58-CNc" firstAttribute="top" secondItem="Ozp-jO-WyR" secondAttribute="bottom" constant="24" id="U67-09-bb6"/>
                             <constraint firstItem="6Mj-KY-Lm6" firstAttribute="top" secondItem="aNv-Di-fj4" secondAttribute="bottom" constant="15" id="Ufb-YN-oq1"/>
                             <constraint firstItem="BiC-6p-hPn" firstAttribute="top" secondItem="ENA-58-CNc" secondAttribute="bottom" constant="20" id="Ul3-jX-IOd"/>
@@ -114,11 +116,17 @@
                             <constraint firstItem="BiC-6p-hPn" firstAttribute="top" secondItem="fBC-y4-NcD" secondAttribute="bottom" id="Yvu-NK-tt9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t4t-aT-FU5" secondAttribute="trailing" constant="87" id="aO5-xf-vTe"/>
                             <constraint firstItem="dXi-dg-ntb" firstAttribute="top" secondItem="6Mj-KY-Lm6" secondAttribute="bottom" constant="16" id="aSl-9X-LQ3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aNv-Di-fj4" secondAttribute="trailing" constant="118" id="dj6-vt-thQ"/>
+                            <constraint firstItem="HoU-O2-Zk8" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leadingMargin" constant="21" id="dv7-LJ-NB5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ENA-58-CNc" secondAttribute="trailing" constant="48" id="eXb-rD-Rgu"/>
                             <constraint firstItem="Ozp-jO-WyR" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leadingMargin" constant="163" id="ezf-h3-osJ"/>
                             <constraint firstItem="aNv-Di-fj4" firstAttribute="top" secondItem="HoU-O2-Zk8" secondAttribute="bottom" constant="15" id="gcb-14-Mvf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dXi-dg-ntb" secondAttribute="trailing" constant="118" id="ggW-MH-pJu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Mj-KY-Lm6" secondAttribute="trailing" constant="118" id="hGn-T9-Pej"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ozp-jO-WyR" secondAttribute="trailing" constant="164" id="iry-Or-8ai"/>
+                            <constraint firstItem="aNv-Di-fj4" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leadingMargin" constant="21" id="qqT-8f-mJ8"/>
                             <constraint firstItem="HoU-O2-Zk8" firstAttribute="top" secondItem="O2v-Aj-hhh" secondAttribute="bottom" constant="15" id="uhr-kd-CIx"/>
+                            <constraint firstItem="dXi-dg-ntb" firstAttribute="leading" secondItem="Sbz-8i-Nuw" secondAttribute="leadingMargin" constant="21" id="waO-dw-1mL"/>
                             <constraint firstItem="fBC-y4-NcD" firstAttribute="top" secondItem="Sbz-8i-Nuw" secondAttribute="top" id="yBh-tQ-Tsw"/>
                             <constraint firstItem="Ozp-jO-WyR" firstAttribute="top" secondItem="Sbz-8i-Nuw" secondAttribute="topMargin" constant="574" id="yV0-fA-yqD"/>
                         </constraints>
