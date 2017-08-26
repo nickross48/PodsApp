@@ -126,7 +126,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="logoutButtonClicked:" destination="YCp-mz-C82" eventType="touchUpInside" id="ynv-oI-QCq"/>
-                                    <action selector="profileButtonClicked:" destination="YCp-mz-C82" eventType="touchUpInside" id="tS5-dg-dCh"/>
                                 </connections>
                             </button>
                             <connections>
@@ -140,11 +139,20 @@
                         <outlet property="homeTableView" destination="Owm-aU-PNF" id="DJF-Ff-BI1"/>
                         <outlet property="logoutButton" destination="bFV-1Y-ht4" id="VuY-hH-gtW"/>
                         <outlet property="recordDataButton" destination="bUa-eU-x4G" id="lPf-Qk-IRG"/>
+                        <segue destination="PQB-sr-gnO" kind="show" identifier="backToLogin" id="27X-Av-W9x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iG0-XR-xg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1292" y="-178.56071964017991"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="svt-8P-KwQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="PQB-sr-gnO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ih-4c-KHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2046" y="-433"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o5A-KX-eKf">

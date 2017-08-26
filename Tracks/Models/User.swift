@@ -65,9 +65,9 @@ class User: NSObject {
     
     private static var _current: User?
     static var current: User {
-        guard let currentUser = _current else {
-            return nil
-            print("Error: current user doesn't exist")
+        guard let currentUser = _current
+            else {
+                fatalError("Error: current user doesn't exist")
         }
         return currentUser
     }

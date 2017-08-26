@@ -35,6 +35,10 @@ class LoginViewController: UIViewController {
         passwordField.layer.cornerRadius = 8.0
         
         signInButton.layer.cornerRadius = 6
+        
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isToolbarHidden = true
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

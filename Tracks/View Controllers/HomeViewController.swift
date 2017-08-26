@@ -88,6 +88,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func logUserOut() {
         do{
             try Auth.auth().signOut()
+            performSegue(withIdentifier: "backToLogin", sender: self)
         } catch let error as NSError {
             assertionFailure("Error: error signing in \(error.localizedDescription)")
         }
