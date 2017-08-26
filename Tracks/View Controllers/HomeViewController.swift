@@ -47,7 +47,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var dateLabel: UILabel!
     
-    // add pods to Firebase
+//  ADD PODS to Firebase code here
     @IBOutlet weak var addPodsButton: UIBarButtonItem!
     @IBAction func addPodsButtonClicked(_ sender: Any) {
         let alertController = UIAlertController(title: "Name of Pod", message: "What would you like to track?", preferredStyle: .alert)
@@ -79,15 +79,32 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         present(alertController, animated: true)
     }
     
-    @IBOutlet weak var profileButton: UIBarButtonItem!
-    @IBAction func profileButtonClicked(_ sender: Any) {
+//  LOGOUT code here
+    @IBOutlet weak var logoutButton: UIBarButtonItem!
+    @IBAction func logoutButtonClicked(_ sender: Any) {
         presentLogOut(viewContoller: self)
     }
     
+    func logUserOut() {
+        do{
+            try Auth.auth().signOut()
+        } catch let error as NSError {
+            assertionFailure("Error: error signing in \(error.localizedDescription)")
+        }
+    }
     
-    
-    
-    
+    func presentLogOut(viewContoller: UIViewController) {
+        let logOutAlert = UIAlertController(title: "Logout", message: "Confirm Pods logout", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Log out", style: .default, handler: { _ in
+            self.logUserOut()
+        })
+        
+        let cancelAction2 = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        logOutAlert.addAction(cancelAction)
+        logOutAlert.addAction(cancelAction2)
+        
+        self.present(logOutAlert, animated: true, completion: nil)
+    }
     
     @IBOutlet weak var recordDataButton: UIButton!
     @IBAction func recordDataButtonClicked(_ sender: Any) {
@@ -178,33 +195,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // So as we know what is happening is that what a handler does is that creates and returns an action with the specified behavior so what this does is almost like a setting function because what we are essentially doing is that we are changing the code within firebase to say change the listener block to a block that essentailly tells us that the user has signed out
     }
     
-    func logUserOut() {
-        do{
-            try Auth.auth().signOut()
-        } catch let error as NSError {
-            assertionFailure("Error: error signing in \(error.localizedDescription)")
-            print(error.localizedDescription)
-        }
-        // So this block of code is detrimental to our code and what it  does exactly that it lets us log the user out so let us tackle this code line by line
-        // we essentially want the code to sign our the verified user and we know if the user isnt verified then they cant be signed in
-        // If their is an error with signing the user out then the error will be printed out in the console
-    }
     
-    
-
-    func presentLogOut(viewContoller: UIViewController) {
-        let profileAlertController = UIAlertController(title: "Logout", message: "Confirm Pods logout", preferredStyle: .alert)
-        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (action) in
-            self.logUserOut()
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        profileAlertController.addAction(confirmAction)
-        profileAlertController.addAction(cancelAction)
-        
-        present(profileAlertController, animated: true, completion: nil)
-    }
     
     
 }

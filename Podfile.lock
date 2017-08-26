@@ -49,6 +49,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SwiftChart (0.5.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseUI/Auth
   - IQKeyboardManagerSwift
+  - SwiftChart
 
 SPEC CHECKSUMS:
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
@@ -71,7 +73,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   IQKeyboardManagerSwift: 10f0a6b8ea2904c8943c0e1a116c99f5b8ad83af
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SwiftChart: d1d22d2b1c4582f4d561edf97a210059c00ee256
 
-PODFILE CHECKSUM: be69e3e1f056946c645a8da96674566d9459067a
+PODFILE CHECKSUM: 84a7d36ea5ac0ea9a00770e601d89e1e94d220a3
 
 COCOAPODS: 1.2.1

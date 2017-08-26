@@ -11,6 +11,7 @@ pod 'Firebase/Core'
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-	pod 'IQKeyboardManagerSwift'
+  pod 'IQKeyboardManagerSwift'
+  pod 'SwiftChart'
 
 end

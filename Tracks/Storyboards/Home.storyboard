@@ -125,15 +125,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="logoutButtonClicked:" destination="YCp-mz-C82" eventType="touchUpInside" id="ynv-oI-QCq"/>
                                     <action selector="profileButtonClicked:" destination="YCp-mz-C82" eventType="touchUpInside" id="tS5-dg-dCh"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <action selector="logoutButtonClicked:" destination="YCp-mz-C82" id="WKQ-Mc-WB9"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addPodsButton" destination="XSW-LA-MWo" id="jhJ-Y4-kkn"/>
                         <outlet property="dateLabel" destination="kUL-Gc-SGx" id="Wcp-fG-7hE"/>
                         <outlet property="homeTableView" destination="Owm-aU-PNF" id="DJF-Ff-BI1"/>
+                        <outlet property="logoutButton" destination="bFV-1Y-ht4" id="VuY-hH-gtW"/>
                         <outlet property="recordDataButton" destination="bUa-eU-x4G" id="lPf-Qk-IRG"/>
                     </connections>
                 </viewController>
